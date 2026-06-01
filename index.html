@@ -461,6 +461,8 @@
     .tier .rate .amount{font-size:60px}
     .success h3{font-size:34px}
   }
+  .error-state{display:none;text-align:center;padding:32px 16px}
+  .error-state.show{display:block}
 </style>
 </head>
 <body>
@@ -851,21 +853,21 @@
           <div class="wo-sub">// Fill it out · we'll text you a flat rate</div>
 
           <div class="form-row">
-            <div class="field"><label>First Name <span class="req">req</span></label><input id="fn" type="text" placeholder="Jane" required></div>
-            <div class="field"><label>Last Name <span class="req">req</span></label><input id="ln" type="text" placeholder="Doe" required></div>
+            <div class="field"><label>First Name <span class="req">req</span></label><input id="fn" name="first_name" type="text" placeholder="Jane" required></div>
+            <div class="field"><label>Last Name <span class="req">req</span></label><input id="ln" name="last_name" type="text" placeholder="Doe" required></div>
           </div>
           <div class="form-row">
-            <div class="field"><label>Phone <span class="req">req</span></label><input id="ph" type="tel" placeholder="(864) 640-3224" required></div>
-            <div class="field"><label>Email <span class="req">req</span></label><input id="em" type="email" placeholder="you@email.com" required></div>
+            <div class="field"><label>Phone <span class="req">req</span></label><input id="ph" name="phone" type="tel" placeholder="(864) 640-3224" required></div>
+            <div class="field"><label>Email <span class="req">req</span></label><input id="em" name="email" type="email" placeholder="you@email.com" required></div>
           </div>
           <div class="form-row">
-            <div class="field"><label>Moving From <span class="req">req</span></label><input id="from" type="text" placeholder="Street, City" required></div>
-            <div class="field"><label>Moving To <span class="req">req</span></label><input id="to" type="text" placeholder="Street, City" required></div>
+            <div class="field"><label>Moving From <span class="req">req</span></label><input id="from" name="moving_from" type="text" placeholder="Street, City" required></div>
+            <div class="field"><label>Moving To <span class="req">req</span></label><input id="to" name="moving_to" type="text" placeholder="Street, City" required></div>
           </div>
           <div class="form-row">
-            <div class="field"><label>Move Date <span class="req">req</span></label><input id="date" type="date" required></div>
+            <div class="field"><label>Move Date <span class="req">req</span></label><input id="date" name="move_date" type="date" required></div>
             <div class="field"><label>Home Size <span class="req">req</span></label>
-              <select id="size" required>
+              <select id="size" name="home_size" required>
                 <option value="">Select</option>
                 <option>Studio</option>
                 <option>1 Bedroom</option>
@@ -893,9 +895,10 @@
 
           <div class="field">
             <label>Notes <span class="req">optional</span></label>
-            <textarea id="notes" placeholder="Stairs, parking, tight doorways, big items we should know about..."></textarea>
+            <textarea id="notes" name="notes" placeholder="Stairs, parking, tight doorways, big items we should know about..."></textarea>
           </div>
 
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn btn-ink btn-block btn-lg" style="margin-top:8px">Submit Work Order
             <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
           </button>
@@ -907,6 +910,11 @@
           <h3>Work Order Filed</h3>
           <p>Thanks for trusting us with the move. Brayden or one of the crew will text or email you a flat rate within 24 hours during business hours.</p>
           <div class="reply-time">Confirmation # <span class="mono" id="confNum">WO-26-2604</span></div>
+        </div>
+
+        <div class="error-state" id="errorState" role="alert">
+          <p style="font-size:16px;color:var(--ink-soft);margin-bottom:16px">Something went wrong sending your work order. Please call us at 864.640.3224 or email hey@movingcrewgvl.com.</p>
+          <button type="button" class="btn btn-ghost" id="errorRetry">Try Again</button>
         </div>
       </div>
     </div>
@@ -969,6 +977,9 @@
 </div>
 
 <script>
+  // TODO: Replace with the Moving Crew GVL Formspree form ID — David creates at formspree.io
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/TODO_FORM_ID';
+
   // Nav scroll state
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
@@ -988,15 +999,49 @@
     });
   });
 
-  // Form submit -> success state with a generated confirmation number
   const form = document.getElementById('quoteForm');
   const success = document.getElementById('successState');
-  form.addEventListener('submit', (e) => {
+  const errorState = document.getElementById('errorState');
+  const errorRetry = document.getElementById('errorRetry');
+  const submitBtn = form.querySelector('button[type=submit]');
+  const submitBtnOrigHTML = submitBtn.innerHTML;
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const n = String(Math.floor(2000 + Math.random()*8000));
-    document.getElementById('confNum').textContent = 'WO-26-' + n;
-    form.style.display = 'none';
-    success.classList.add('show');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        const n = String(Math.floor(2000 + Math.random() * 8000));
+        document.getElementById('confNum').textContent = 'WO-26-' + n;
+        form.style.display = 'none';
+        success.classList.add('show');
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitBtnOrigHTML;
+        form.style.display = 'none';
+        errorState.classList.add('show');
+      }
+    } catch (_) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = submitBtnOrigHTML;
+      form.style.display = 'none';
+      errorState.classList.add('show');
+    }
+  });
+
+  errorRetry.addEventListener('click', () => {
+    errorState.classList.remove('show');
+    form.style.display = '';
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = submitBtnOrigHTML;
   });
 
   // Dynamic "week of" date in topbar — always shows the current week's Monday.
