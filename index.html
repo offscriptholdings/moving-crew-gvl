@@ -848,6 +848,7 @@
       <div class="wo-right">
         <form id="quoteForm" novalidate>
           <h3>Work Order Intake</h3>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
           <div class="wo-sub">// Fill it out · we'll text you a flat rate</div>
 
           <div class="form-row">
@@ -988,15 +989,46 @@
     });
   });
 
-  // Form submit -> success state with a generated confirmation number
+  // Form submit -> POST to Formspree, then show the success state with a confirmation number.
   const form = document.getElementById('quoteForm');
   const success = document.getElementById('successState');
-  form.addEventListener('submit', (e) => {
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xzdwlqwr';
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const n = String(Math.floor(2000 + Math.random()*8000));
-    document.getElementById('confNum').textContent = 'WO-26-' + n;
-    form.style.display = 'none';
-    success.classList.add('show');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const hp = form.querySelector('input[name="_gotcha"]');
+    if (hp && hp.value) return; // honeypot: silently drop bots
+    const btn = form.querySelector('button[type="submit"]');
+    const services = Array.from(form.querySelectorAll('input[name="svc"]:checked'))
+      .map(cb => cb.parentElement.textContent.trim());
+    const payload = {
+      first_name: document.getElementById('fn').value.trim(),
+      last_name: document.getElementById('ln').value.trim(),
+      phone: document.getElementById('ph').value.trim(),
+      email: document.getElementById('em').value.trim(),
+      moving_from: document.getElementById('from').value.trim(),
+      moving_to: document.getElementById('to').value.trim(),
+      move_date: document.getElementById('date').value,
+      home_size: document.getElementById('size').value,
+      services: services.join(', '),
+      notes: document.getElementById('notes').value.trim()
+    };
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error('Formspree ' + res.status);
+      const n = String(Math.floor(2000 + Math.random()*8000));
+      document.getElementById('confNum').textContent = 'WO-26-' + n;
+      form.style.display = 'none';
+      success.classList.add('show');
+    } catch (err) {
+      if (btn) btn.disabled = false;
+      alert("Sorry — we couldn't send your request just now. Please call (864) 640-3224 or try again in a moment.");
+    }
   });
 
   // Dynamic "week of" date in topbar — always shows the current week's Monday.
