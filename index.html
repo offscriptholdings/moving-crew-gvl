@@ -470,7 +470,7 @@
   <div class="topbar-inner">
     <span class="pulse">Booking moves for week of <span id="weekOf">June 1</span></span>
     <span>Owner-operated · Travelers Rest, SC</span>
-    <span>Call 864.640.3224</span>
+    <span>Call 864.280.7243</span>
   </div>
 </div>
 
@@ -494,7 +494,8 @@
       <a href="#how"><span>01</span>How</a>
       <a href="#services"><span>02</span>Services</a>
       <a href="#pricing"><span>03</span>Rates</a>
-      <a href="#reviews"><span>04</span>Reviews</a>
+      <!-- HIDDEN until real reviews exist — restore this line to bring Reviews back:
+      <a href="#reviews"><span>04</span>Reviews</a> -->
       <a href="#about"><span>05</span>Crew</a>
     </div>
     <a href="#quote" class="btn btn-primary">Open Work Order
@@ -522,7 +523,7 @@
         <a href="#quote" class="btn btn-primary btn-lg">Get a Free Quote
           <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
         </a>
-        <a href="tel:8646403224" class="btn btn-ghost btn-lg">Call 864.640.3224</a>
+        <a href="tel:8642807243" class="btn btn-ghost btn-lg">Call 864.280.7243</a>
       </div>
       <div class="spec">
         <div class="line"><span class="k">Service</span><span class="v">Labor only · no truck</span></div>
@@ -577,7 +578,7 @@
           <a href="#quote" class="btn btn-primary btn-lg">Claim a Founding Slot
             <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
           </a>
-          <a href="tel:8646403224" class="btn btn-ghost btn-lg">Or call us</a>
+          <a href="tel:8642807243" class="btn btn-ghost btn-lg">Or call us</a>
         </div>
       </div>
       <div class="fo-right">
@@ -780,7 +781,8 @@
 </section>
 
 <!-- ========== REVIEWS ========== -->
-<section class="reviews" id="reviews" data-screen-label="06 Reviews">
+<!-- HIDDEN until real reviews/vouches exist. To restore: remove the `hidden` attribute below (and uncomment the nav link above). -->
+<section class="reviews" id="reviews" data-screen-label="06 Reviews" hidden>
   <div class="wrap">
     <div class="sect-marker">
       <span class="glyph">§</span>
@@ -856,7 +858,7 @@
             <div class="field"><label>Last Name <span class="req">req</span></label><input id="ln" type="text" placeholder="Doe" required></div>
           </div>
           <div class="form-row">
-            <div class="field"><label>Phone <span class="req">req</span></label><input id="ph" type="tel" placeholder="(864) 640-3224" required></div>
+            <div class="field"><label>Phone <span class="req">req</span></label><input id="ph" type="tel" placeholder="(864) 280-7243" required></div>
             <div class="field"><label>Email <span class="req">req</span></label><input id="em" type="email" placeholder="you@email.com" required></div>
           </div>
           <div class="form-row">
@@ -929,7 +931,7 @@
       </div>
       <div class="col">
         <h5>// Contact</h5>
-        <a href="tel:8646403224">864.640.3224</a>
+        <a href="tel:8642807243">864.280.7243</a>
         <a href="mailto:hey@movingcrewgvl.com">hey@movingcrewgvl.com</a>
         <p>Mon — Sat / 7am to 7pm</p>
       </div>
@@ -959,7 +961,7 @@
 
 <!-- Mobile sticky action bar -->
 <div class="mobile-cta" aria-label="Quick actions">
-  <a href="tel:8646403224" class="m-call">
+  <a href="tel:8642807243" class="m-call">
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h3l1.2 3-1.6 1.2a8 8 0 0 0 3.2 3.2L13 12l1 3v0h-2A10 10 0 0 1 2 5V3z"/></svg>
     Call
   </a>
@@ -1027,7 +1029,7 @@
       success.classList.add('show');
     } catch (err) {
       if (btn) btn.disabled = false;
-      alert("Sorry — we couldn't send your request just now. Please call (864) 640-3224 or try again in a moment.");
+      alert("Sorry — we couldn't send your request just now. Please call (864) 280-7243 or try again in a moment.");
     }
   });
 
