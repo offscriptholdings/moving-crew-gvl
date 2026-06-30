@@ -1,3 +1,3 @@
-# Moving Crew GVL
+# Reedy Moving Co.
 
-Work order intake page for Moving Crew Greenville. Single-page static HTML, deployed to Vercel.
+Work order intake page for Reedy Moving Co. (Greenville / Upstate SC). Single-page static HTML, deployed to Vercel. Domain: reedymoving.com

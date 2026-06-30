@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Movers in Greenville, SC | Moving Crew GVL</title>
+<title>Movers in Greenville, SC | Reedy Moving Co.</title>
 <meta name="description" content="Local labor-only movers serving Greenville, Greer, Simpsonville &amp; Travelers Rest. Flat hourly rates, no truck needed — loading, unloading, packing. Free quote within 24 hours.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -15,20 +15,20 @@
 
 <!-- Open Graph (link previews + agent metadata) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Movers in Greenville, SC | Moving Crew GVL">
+<meta property="og:title" content="Movers in Greenville, SC | Reedy Moving Co.">
 <meta property="og:description" content="Local labor-only movers in the Upstate. Flat hourly rates, no surprises. Free quote in 24 hours.">
-<meta property="og:url" content="https://www.movingcrewgvl.com">
-<meta property="og:image" content="https://www.movingcrewgvl.com/og-image.png">
+<meta property="og:url" content="https://www.reedymoving.com">
+<meta property="og:image" content="https://www.reedymoving.com/og-image.png">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MovingCompany",
-  "name": "Moving Crew GVL",
-  "url": "https://www.movingcrewgvl.com",
-  "image": "https://www.movingcrewgvl.com/og-image.png",
+  "name": "Reedy Moving Co.",
+  "url": "https://www.reedymoving.com",
+  "image": "https://www.reedymoving.com/og-image.png",
   "telephone": "+1-864-280-7243",
-  "email": "David@movingcrewgvl.com",
+  "email": "David@reedymoving.com",
   "priceRange": "$149–$269/hr",
   "foundingDate": "2026",
   "description": "Owner-operated, labor-only local movers serving the Greenville, SC Upstate. Loading, unloading, packing, and single-item moves at flat hourly rates.",
@@ -120,6 +120,8 @@
     --green-deep:#1f5a39;
     --line:#cdc6b5;
     --line-dark:#9b9685;
+    --ember:#c8743f;        /* mill-rust — primary brand accent, used sparingly */
+    --ember-hover:#d9854b;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--cream);color:var(--ink);font-family:'Barlow',system-ui,sans-serif;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -154,6 +156,7 @@
   .logo-mark::after{content:"";position:absolute;inset:auto -4px -4px auto;width:10px;height:10px;background:var(--green)}
   .logo-word{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;text-transform:uppercase;letter-spacing:.02em;line-height:1}
   .logo-word small{display:block;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:9px;letter-spacing:.28em;color:var(--green);margin-top:3px}
+  .logo-word .co{color:var(--ember)}
 
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
@@ -162,8 +165,8 @@
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border:1px solid transparent;transition:background .15s, color .15s, border-color .15s, transform .05s;position:relative}
   .btn:active{transform:translateY(1px)}
-  .btn-primary{background:var(--green);color:#fff}
-  .btn-primary:hover{background:var(--green-hover)}
+  .btn-primary{background:var(--ember);color:#fff}
+  .btn-primary:hover{background:var(--ember-hover)}
   .btn-ink{background:var(--ink);color:var(--cream)}
   .btn-ink:hover{background:var(--green)}
   .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
@@ -174,7 +177,7 @@
 
   /* Section marker — § 01 / HERO */
   .sect-marker{display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:48px}
-  .sect-marker .glyph{font-size:13px;color:var(--ink)}
+  .sect-marker .glyph{font-size:13px;color:var(--ember)}
   .sect-marker .name{color:var(--ink)}
   .sect-marker .spacer{flex:1;height:1px;background:var(--line)}
   .sect-marker .right{color:var(--muted)}
@@ -188,7 +191,7 @@
   .hero-top .v{color:var(--ink);font-weight:500}
   .hero-headline{position:relative}
   .hero-headline h1{font-size:clamp(76px,15vw,260px);line-height:.86}
-  .hero-headline h1 .accent{color:var(--green)}
+  .hero-headline h1 .accent{color:var(--ember)}
   .hero-headline h1 .row{display:block;white-space:nowrap}
   .hero-headline h1 .row.shift{margin-left:.18em}
   /* Layered "specs" overlay over the headline */
@@ -338,8 +341,8 @@
   .tier.feature .rate .currency,
   .tier.feature .rate .per{color:rgba(250,247,243,.75)}
   .tier.feature ul li .v{color:#fff}
-  .tier.feature .btn-primary{background:var(--green-hover);color:var(--ink)}
-  .tier.feature .btn-primary:hover{background:#fff}
+  .tier.feature .btn-primary{background:var(--ember);color:#fff}
+  .tier.feature .btn-primary:hover{background:var(--ember-hover)}
   .tier.feature .ribbon{position:absolute;top:0;right:0;background:var(--green-hover);color:var(--ink);font-family:'JetBrains Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:6px 12px}
 
   .estimate-foot{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);background:var(--cream-2)}
@@ -449,9 +452,23 @@
   .mobile-cta a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;border:1px solid transparent}
   .mobile-cta .m-call{background:transparent;color:var(--cream);border-color:rgba(250,247,243,.4)}
   .mobile-cta .m-call:active{background:rgba(250,247,243,.1)}
-  .mobile-cta .m-quote{background:var(--green);color:#fff}
-  .mobile-cta .m-quote:active{background:var(--green-deep)}
+  .mobile-cta .m-quote{background:var(--ember);color:#fff}
+  .mobile-cta .m-quote:active{background:var(--ember-hover)}
   .mobile-cta svg{width:15px;height:15px;flex:0 0 auto}
+
+  /* ---------- HERO KICKER (spec label above headline) ---------- */
+  .kicker{display:flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
+  .kicker .glyph{color:var(--ember);font-size:13px}
+
+  /* ---------- HERITAGE STRIP ("Why Reedy") + bridge mark ---------- */
+  .millstrip-sec{background:var(--ink);padding:60px 0}
+  .millstrip-sec .bridge-mark{margin:0 auto 30px;display:block}
+  .millstrip{border:1px solid var(--line-dark);border-top:2px solid var(--ember);
+    padding:24px 30px;background:var(--paper)}
+  .millstrip .lab{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ember);margin-bottom:10px}
+  .millstrip p{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;
+    font-size:clamp(18px,5vw,26px);line-height:1.12;max-width:24ch;color:var(--ink)}
 
   /* ---------- Responsive ---------- */
   @media (max-width: 1100px){
@@ -571,7 +588,7 @@
 <!-- ========== NAV ========== -->
 <nav class="nav" id="nav" data-screen-label="Nav">
   <div class="nav-inner">
-    <a href="#top" class="logo" aria-label="Moving Crew GVL home">
+    <a href="#top" class="logo" aria-label="Reedy Moving Co. home">
       <span class="logo-mark" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="#faf7f3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <rect x="9" y="4.5" width="8.5" height="6" stroke-width="1.7"/>
@@ -582,7 +599,7 @@
           <circle cx="8.4" cy="21.4" r="2" stroke-width="1.7"/>
         </svg>
       </span>
-      <span class="logo-word">Moving Crew<small>Est. 2026 · GVL</small></span>
+      <span class="logo-word">Reedy Moving <span class="co">Co.</span><small>Est. 2026 · Travelers Rest, SC</small></span>
     </a>
     <div class="nav-links" aria-label="Primary">
       <a href="#how"><span>01</span>How</a>
@@ -604,6 +621,7 @@
 <header class="hero" data-screen-label="01 Hero">
   <div class="wrap">
     <div class="hero-headline">
+      <p class="kicker"><span class="glyph">§</span> Labor-only moving · Greenville &amp; the Upstate, SC</p>
       <h1 class="display">
         <span class="row">We Do</span>
         <span class="row shift">The <span class="accent">Heavy</span></span>
@@ -612,7 +630,7 @@
     </div>
 
     <div class="hero-bottom">
-      <p class="sub">Local movers who show up on time, treat your stuff like their own, and don't leave until the job's done right.</p>
+      <p class="sub">Greenville movers who show up on time, treat your stuff like their own, and don't leave until the job's done right.</p>
       <div class="ctas">
         <a href="#quote" class="btn btn-primary btn-lg">Get a Free Quote
           <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
@@ -1009,8 +1027,33 @@
   </div>
 </section>
 
+<!-- ========== HERITAGE STRIP ("Why Reedy") ========== -->
+<section class="millstrip-sec" data-screen-label="09 Heritage">
+  <div class="wrap">
+    <svg class="bridge-mark" viewBox="0 0 220 150" fill="none" stroke="#c8743f" stroke-width="1.1"
+         stroke-linecap="round" width="200" aria-hidden="true">
+      <path d="M150 14 L116 104"/>
+      <path d="M6 104 Q110 78 214 104" stroke="#cfd2cf" stroke-width="1.4"/>
+      <path d="M150 14 L40 99"/><path d="M150 14 L70 92"/><path d="M150 14 L98 86"/>
+      <path d="M150 14 L126 87"/><path d="M150 14 L160 92"/><path d="M150 14 L196 99"/>
+      <path d="M116 104 L116 118" stroke="#cfd2cf"/><path d="M150 14 L150 8" stroke="#cfd2cf"/>
+      <g stroke="#5a6563" stroke-width="1">
+        <path d="M30 126 L30 138"/><path d="M50 124 L50 137"/><path d="M70 127 L70 139"/>
+        <path d="M90 125 L90 138"/><path d="M110 128 L110 140"/><path d="M130 125 L130 138"/>
+        <path d="M150 127 L150 139"/><path d="M170 125 L170 137"/><path d="M190 127 L190 139"/>
+      </g>
+      <g stroke="#5a6563" stroke-width=".8"><path d="M6 112 L214 112"/>
+        <path d="M6 108 L6 116"/><path d="M214 108 L214 116"/></g>
+    </svg>
+    <div class="millstrip">
+      <div class="lab">// Why "Reedy"</div>
+      <p>The Reedy ran the mills that built this town. We just kept the working part.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ========== FOOTER ========== -->
-<footer data-screen-label="09 Footer">
+<footer data-screen-label="10 Footer">
   <div class="wrap">
     <div class="foot">
       <div class="col">
@@ -1018,14 +1061,14 @@
           <span class="logo-mark" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="#faf7f3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="4.5" width="8.5" height="6" stroke-width="1.7"/><rect x="9" y="10.5" width="8.5" height="5.3" stroke-width="1.7"/><path d="M6 3 V19"/><path d="M6 19 H16.5"/><path d="M6 19 L3.4 21.6"/><circle cx="8.4" cy="21.4" r="2" stroke-width="1.7"/></svg>
           </span>
-          <span class="logo-word">Moving Crew<small style="color:var(--green-hover)">Est. 2026 · GVL</small></span>
+          <span class="logo-word">Reedy Moving <span class="co">Co.</span><small style="color:var(--green-hover)">Est. 2026 · Travelers Rest, SC</small></span>
         </a>
         <p style="margin-top:14px;max-width:32ch">Locally owned moving labor. Brayden and family. No franchise. No call center.</p>
       </div>
       <div class="col">
         <h5>// Contact</h5>
         <a href="tel:8642807243">864.280.7243</a>
-        <a href="mailto:David@movingcrewgvl.com">David@movingcrewgvl.com</a>
+        <a href="mailto:David@reedymoving.com">David@reedymoving.com</a>
         <p>Mon — Sat / 7am to 7pm</p>
       </div>
       <div class="col">
@@ -1045,7 +1088,7 @@
       </div>
     </div>
     <div class="foot-bar">
-      <span class="pulse">© 2026 Moving Crew GVL</span>
+      <span class="pulse">© 2026 Reedy Moving Co.</span>
       <span>Built in Travelers Rest · v2.6</span>
     </div>
   </div>
