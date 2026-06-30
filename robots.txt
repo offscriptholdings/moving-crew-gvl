@@ -17,4 +17,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.movingcrewgvl.com/sitemap.xml
+Sitemap: https://www.reedymoving.com/sitemap.xml
