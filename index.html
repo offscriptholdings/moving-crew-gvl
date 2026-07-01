@@ -5,13 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Movers in Greenville, SC | Reedy Moving Co.</title>
 <meta name="description" content="Local labor-only movers serving Greenville, Greer, Simpsonville &amp; Travelers Rest. Flat hourly rates, no truck needed — loading, unloading, packing. Free quote within 24 hours.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#15191a">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <!-- Open Graph (link previews + agent metadata) -->
 <meta property="og:type" content="website">
@@ -104,7 +97,13 @@
   }
 }
 </script>
-
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#15191a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#faf7f3;
@@ -115,13 +114,11 @@
     --ink:#15191a;
     --ink-soft:#3a423d;
     --muted:#7a7567;
-    --green:#2d7a4f;
-    --green-hover:#38a066;
-    --green-deep:#1f5a39;
+    --green:#c8743f;
+    --green-hover:#d9854b;
+    --green-deep:#9e542a;
     --line:#cdc6b5;
     --line-dark:#9b9685;
-    --ember:#c8743f;        /* mill-rust — primary brand accent, used sparingly */
-    --ember-hover:#d9854b;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--cream);color:var(--ink);font-family:'Barlow',system-ui,sans-serif;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -156,7 +153,6 @@
   .logo-mark::after{content:"";position:absolute;inset:auto -4px -4px auto;width:10px;height:10px;background:var(--green)}
   .logo-word{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;text-transform:uppercase;letter-spacing:.02em;line-height:1}
   .logo-word small{display:block;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:9px;letter-spacing:.28em;color:var(--green);margin-top:3px}
-  .logo-word .co{color:var(--ember)}
 
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
@@ -165,10 +161,10 @@
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border:1px solid transparent;transition:background .15s, color .15s, border-color .15s, transform .05s;position:relative}
   .btn:active{transform:translateY(1px)}
-  .btn-primary{background:var(--ember);color:#fff}
-  .btn-primary:hover{background:var(--ember-hover)}
+  .btn-primary{background:var(--green);color:var(--ink)}
+  .btn-primary:hover{background:var(--green-hover)}
   .btn-ink{background:var(--ink);color:var(--cream)}
-  .btn-ink:hover{background:var(--green)}
+  .btn-ink:hover{background:var(--green);color:var(--ink)}
   .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
   .btn-ghost:hover{background:var(--ink);color:var(--cream)}
   .btn-lg{padding:18px 26px;font-size:14px}
@@ -177,7 +173,7 @@
 
   /* Section marker — § 01 / HERO */
   .sect-marker{display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:48px}
-  .sect-marker .glyph{font-size:13px;color:var(--ember)}
+  .sect-marker .glyph{font-size:13px;color:var(--ink)}
   .sect-marker .name{color:var(--ink)}
   .sect-marker .spacer{flex:1;height:1px;background:var(--line)}
   .sect-marker .right{color:var(--muted)}
@@ -191,7 +187,7 @@
   .hero-top .v{color:var(--ink);font-weight:500}
   .hero-headline{position:relative}
   .hero-headline h1{font-size:clamp(76px,15vw,260px);line-height:.86}
-  .hero-headline h1 .accent{color:var(--ember)}
+  .hero-headline h1 .accent{color:var(--green)}
   .hero-headline h1 .row{display:block;white-space:nowrap}
   .hero-headline h1 .row.shift{margin-left:.18em}
   /* Layered "specs" overlay over the headline */
@@ -341,8 +337,8 @@
   .tier.feature .rate .currency,
   .tier.feature .rate .per{color:rgba(250,247,243,.75)}
   .tier.feature ul li .v{color:#fff}
-  .tier.feature .btn-primary{background:var(--ember);color:#fff}
-  .tier.feature .btn-primary:hover{background:var(--ember-hover)}
+  .tier.feature .btn-primary{background:var(--green-hover);color:var(--ink)}
+  .tier.feature .btn-primary:hover{background:#fff}
   .tier.feature .ribbon{position:absolute;top:0;right:0;background:var(--green-hover);color:var(--ink);font-family:'JetBrains Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:6px 12px}
 
   .estimate-foot{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);background:var(--cream-2)}
@@ -375,11 +371,20 @@
 
   /* ---------- ABOUT ---------- */
   .about{padding:80px 0;background:var(--cream);border-top:1px solid var(--line);position:relative}
-  .about-inner{max-width:780px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:18px;position:relative}
-  .about-inner .stamp{justify-content:center;align-self:center;margin-bottom:4px}
+  .about-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:330px 1fr;gap:48px;align-items:center;text-align:left;position:relative}
+  .about-inner .stamp{justify-content:flex-start;align-self:start;margin-bottom:4px}
+  .about-letter{display:flex;flex-direction:column;gap:18px;min-width:0}
   .about p{font-family:'Barlow',serif;font-style:italic;font-size:21px;line-height:1.55;color:var(--ink)}
   .about .signoff{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--green)}
   .about .signoff::before,.about .signoff::after{content:"";width:48px;height:1px;background:var(--line-dark)}
+  .about-letter .signoff{justify-content:flex-start}
+  /* First-move photo card */
+  .firstmove{align-self:center;justify-self:center;width:100%;max-width:340px;background:var(--paper);border:1px solid var(--ink);text-align:left;margin:0;position:relative}
+  .firstmove::after{content:"";position:absolute;right:-5px;bottom:-5px;width:12px;height:12px;background:var(--green)}
+  .firstmove .fm-cap{display:flex;justify-content:space-between;gap:10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:9px 12px;border-bottom:1px dashed var(--line-dark)}
+  .firstmove .fm-cap b{color:var(--green);font-weight:500}
+  .firstmove img{display:block;width:100%;height:auto}
+  .firstmove figcaption{font-family:'Barlow',sans-serif;font-style:italic;font-size:14px;line-height:1.45;color:var(--ink-soft);padding:11px 14px;border-top:1px solid var(--ink)}
 
   /* ---------- QUOTE (Work Order) ---------- */
   .quote{padding:88px 0;background:var(--ink);color:var(--cream);position:relative}
@@ -420,7 +425,7 @@
   .check input{appearance:none;-webkit-appearance:none;width:14px;height:14px;border:1px solid var(--ink);background:transparent;display:grid;place-items:center;flex:0 0 auto;cursor:pointer}
   .check input:checked{background:var(--green);border-color:var(--green)}
   .check input:checked::after{content:"";width:7px;height:3.5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
-  .check:has(input:checked){border-color:var(--green);background:rgba(45,122,79,.06)}
+  .check:has(input:checked){border-color:var(--green);background:rgba(200,116,63,.06)}
   .form-foot{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:.06em}
 
   .success{display:none;text-align:center;padding:32px 16px}
@@ -452,23 +457,9 @@
   .mobile-cta a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;border:1px solid transparent}
   .mobile-cta .m-call{background:transparent;color:var(--cream);border-color:rgba(250,247,243,.4)}
   .mobile-cta .m-call:active{background:rgba(250,247,243,.1)}
-  .mobile-cta .m-quote{background:var(--ember);color:#fff}
-  .mobile-cta .m-quote:active{background:var(--ember-hover)}
+  .mobile-cta .m-quote{background:var(--green);color:#fff}
+  .mobile-cta .m-quote:active{background:var(--green-deep)}
   .mobile-cta svg{width:15px;height:15px;flex:0 0 auto}
-
-  /* ---------- HERO KICKER (spec label above headline) ---------- */
-  .kicker{display:flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
-  .kicker .glyph{color:var(--ember);font-size:13px}
-
-  /* ---------- HERITAGE STRIP ("Why Reedy") + bridge mark ---------- */
-  .millstrip-sec{background:var(--ink);padding:60px 0}
-  .millstrip-sec .bridge-mark{margin:0 auto 30px;display:block}
-  .millstrip{border:1px solid var(--line-dark);border-top:2px solid var(--ember);
-    padding:24px 30px;background:var(--paper)}
-  .millstrip .lab{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;
-    text-transform:uppercase;color:var(--ember);margin-bottom:10px}
-  .millstrip p{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;
-    font-size:clamp(18px,5vw,26px);line-height:1.12;max-width:24ch;color:var(--ink)}
 
   /* ---------- Responsive ---------- */
   @media (max-width: 1100px){
@@ -508,6 +499,10 @@
     .how,.services,.pricing{padding:52px 0}
     .reviews{padding:52px 0}
     .about{padding:56px 0}
+    .about-inner{grid-template-columns:1fr;gap:26px;text-align:center;max-width:560px}
+    .about-letter{align-items:center;text-align:center}
+    .about-inner .stamp{justify-content:center;align-self:center}
+    .about .signoff{justify-content:center}
     .quote{padding:56px 0}
     section[class].founding-offer,.founding-offer{padding:52px 0}
 
@@ -588,25 +583,25 @@
 <!-- ========== NAV ========== -->
 <nav class="nav" id="nav" data-screen-label="Nav">
   <div class="nav-inner">
-    <a href="#top" class="logo" aria-label="Reedy Moving Co. home">
+    <a href="#top" class="logo" aria-label="Reedy Moving Co home">
       <span class="logo-mark" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="#faf7f3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="9" y="4.5" width="8.5" height="6" stroke-width="1.7"/>
-          <rect x="9" y="10.5" width="8.5" height="5.3" stroke-width="1.7"/>
-          <path d="M6 3 V19"/>
-          <path d="M6 19 H16.5"/>
-          <path d="M6 19 L3.4 21.6"/>
-          <circle cx="8.4" cy="21.4" r="2" stroke-width="1.7"/>
+          <path d="M3 16 Q12 12.4 21 16" stroke-width="1.7"/>
+          <path d="M14.6 14.3 L17 4" stroke-width="1.7"/>
+          <path d="M17 4 L5 15.3" stroke="#c8743f" stroke-width="1.4"/>
+          <path d="M17 4 L9.4 14.1" stroke="#c8743f" stroke-width="1.4"/>
+          <path d="M17 4 L13 13.4" stroke="#c8743f" stroke-width="1.4"/>
+          <path d="M17 4 L20 14.9" stroke="#c8743f" stroke-width="1.4"/>
         </svg>
       </span>
-      <span class="logo-word">Reedy Moving <span class="co">Co.</span><small>Est. 2026 · Travelers Rest, SC</small></span>
+      <span class="logo-word">Reedy Moving Co.<small>Est. 2026 · GVL</small></span>
     </a>
     <div class="nav-links" aria-label="Primary">
       <a href="#how"><span>01</span>How</a>
       <a href="#services"><span>02</span>Services</a>
       <a href="#pricing"><span>03</span>Rates</a>
-      <!-- HIDDEN until real reviews exist — restore this line to bring Reviews back:
-      <a href="#reviews"><span>04</span>Reviews</a> -->
+      <!-- TEMP HIDDEN: Reviews — re-enable by removing style="display:none" here and on <section id="reviews"> -->
+      <a href="#reviews" style="display:none"><span>04</span>Reviews</a>
       <a href="#about"><span>05</span>Crew</a>
     </div>
     <a href="#quote" class="btn btn-primary">Open Work Order
@@ -621,8 +616,7 @@
 <header class="hero" data-screen-label="01 Hero">
   <div class="wrap">
     <div class="hero-headline">
-      <p class="kicker"><span class="glyph">§</span> Labor-only moving · Greenville &amp; the Upstate, SC</p>
-      <h1 class="display">
+      <h1 class="display" id="heroHeadline">
         <span class="row">We Do</span>
         <span class="row shift">The <span class="accent">Heavy</span></span>
         <span class="row">Lifting.</span>
@@ -630,7 +624,7 @@
     </div>
 
     <div class="hero-bottom">
-      <p class="sub">Greenville movers who show up on time, treat your stuff like their own, and don't leave until the job's done right.</p>
+      <p class="sub">Local movers who show up on time, treat your stuff like their own, and don't leave until the job's done right.</p>
       <div class="ctas">
         <a href="#quote" class="btn btn-primary btn-lg">Get a Free Quote
           <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
@@ -670,7 +664,7 @@
       <span class="spacer"></span>
       <span class="name">Founding Customer Offer</span>
       <span class="spacer"></span>
-      <span class="right">05 / 05 slots open</span>
+      <span class="right">04 / 05 slots open</span>
     </div>
     <div class="fo-card">
       <div class="fo-left">
@@ -679,12 +673,12 @@
         <h3 class="display fo-h">Our First Five<br><span class="accent">Get 20% Off.</span></h3>
         <p class="fo-blurb">We're a new paid crew with fifteen years of moving family between us. We need our first five real bookings to build a real reputation &mdash; so here's the deal, straight up.</p>
         <div class="fo-counter">
+          <span class="fo-dot filled"></span>
           <span class="fo-dot open"></span>
           <span class="fo-dot open"></span>
           <span class="fo-dot open"></span>
           <span class="fo-dot open"></span>
-          <span class="fo-dot open"></span>
-          <span class="fo-counter-lab">5 of 5 founding slots open</span>
+          <span class="fo-counter-lab">4 of 5 founding slots open</span>
         </div>
         <div class="fo-cta">
           <a href="#quote" class="btn btn-primary btn-lg">Claim a Founding Slot
@@ -765,7 +759,7 @@
       <span class="spacer"></span>
       <span class="name">Services Offered</span>
       <span class="spacer"></span>
-      <span class="right">Six line items</span>
+      <span class="right">Five line items</span>
     </div>
     <div class="svc-head">
       <h2 class="display">What We Move.</h2>
@@ -789,8 +783,8 @@
       <article class="svc-item">
         <div class="svc-code">SVC-03</div>
         <div class="svc-name">Single Item Moves</div>
-        <p class="svc-desc">Couches, pianos, gym equipment, antiques. We handle the awkward stuff most movers won't quote.</p>
-        <div class="svc-tags"><span class="svc-tag">Piano</span><span class="svc-tag">Safe</span><span class="svc-tag">Antique</span></div>
+        <p class="svc-desc">Couches, gym equipment, antiques. We handle the awkward stuff most movers won't quote.</p>
+        <div class="svc-tags"><span class="svc-tag">Awkward</span><span class="svc-tag">Antique</span></div>
         <div class="svc-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10 H16 M11 5 L16 10 L11 15"/></svg></div>
       </article>
       <article class="svc-item">
@@ -802,13 +796,6 @@
       </article>
       <article class="svc-item">
         <div class="svc-code">SVC-05</div>
-        <div class="svc-name">Packing Services</div>
-        <p class="svc-desc">Add packing the day before or morning of. Boxes, paper, tape, and the patience to wrap your grandma's china.</p>
-        <div class="svc-tags"><span class="svc-tag">Full pack</span><span class="svc-tag">Partial</span><span class="svc-tag">Fragile</span></div>
-        <div class="svc-arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10 H16 M11 5 L16 10 L11 15"/></svg></div>
-      </article>
-      <article class="svc-item">
-        <div class="svc-code">SVC-06</div>
         <div class="svc-name">Last-Minute Moves</div>
         <p class="svc-desc">Lease falling through, closing moved up, life happened. Call us. We squeeze in same-week bookings when we can.</p>
         <div class="svc-tags"><span class="svc-tag">Same week</span><span class="svc-tag">Rush</span></div>
@@ -848,14 +835,14 @@
             <li class="incl"><span class="k">Labor &amp; travel</span><span class="v">incl.</span></li>
             <li class="incl"><span class="k">Pads &amp; shrink wrap</span><span class="v">incl.</span></li>
             <li class="incl"><span class="k">Dollies &amp; straps</span><span class="v">incl.</span></li>
-            <li><span class="k">Disassembly</span><span class="v">+ $25/hr</span></li>
+            <li class="incl"><span class="k">Disassembly</span><span class="v">incl.</span></li>
             <li><span class="k">Min. booking</span><span class="v">2 hr</span></li>
           </ul>
           <div class="rate"><span class="currency">$</span><span class="amount">149</span><span class="per">/ hr</span></div>
           <a href="#quote" class="btn btn-primary btn-block">Book 2 Movers</a>
         </article>
         <article class="tier feature">
-          <div class="ribbon">▸ Most Booked</div>
+          <div class="ribbon">▸ Best Deal</div>
           <div class="tag"><span class="id">// TIER 02</span><span>Standard</span></div>
           <h3>3 Movers<small>Best for 2 to 3-bedroom homes. The crew that fits the most jobs.</small></h3>
           <ul>
@@ -875,7 +862,7 @@
             <li class="incl"><span class="k">Labor &amp; travel</span><span class="v">incl.</span></li>
             <li class="incl"><span class="k">Pads &amp; shrink wrap</span><span class="v">incl.</span></li>
             <li class="incl"><span class="k">Disassembly</span><span class="v">incl.</span></li>
-            <li class="incl"><span class="k">Heavy / piano</span><span class="v">incl.</span></li>
+            <li class="incl"><span class="k">Heavy items</span><span class="v">incl.</span></li>
             <li><span class="k">Min. booking</span><span class="v">2 hr</span></li>
           </ul>
           <div class="rate"><span class="currency">$</span><span class="amount">269</span><span class="per">/ hr</span></div>
@@ -893,8 +880,8 @@
 </section>
 
 <!-- ========== REVIEWS ========== -->
-<!-- HIDDEN until real reviews/vouches exist. To restore: remove the `hidden` attribute below (and uncomment the nav link above). -->
-<section class="reviews" id="reviews" data-screen-label="06 Reviews" hidden>
+<!-- TEMP HIDDEN: remove style="display:none" to restore Job Receipts (code intact) -->
+<section class="reviews" id="reviews" data-screen-label="06 Reviews" style="display:none">
   <div class="wrap">
     <div class="sect-marker">
       <span class="glyph">§</span>
@@ -918,10 +905,17 @@
 <section class="about" id="about" data-screen-label="07 About">
   <div class="wrap">
     <div class="about-inner">
-      <span class="stamp">Letter from the owner</span>
-      <p>I've been moving family and friends since 2011 &mdash; couches, pianos, three apartments for my brother, more truckloads than I can count. In 2026, David and I decided to do it for a living.</p>
-      <p>It's me, David, and a short list of trusted friends when we need a third or fourth set of hands. No franchise. No call center. No subs. When you book, you get our people, on time, treating your stuff like our own, not leaving until it's right.</p>
-      <span class="signoff">Brayden &amp; David / Owner-Operators</span>
+      <figure class="firstmove">
+        <div class="fm-cap"><span>// FORM PH-01 · FIRST MOVE</span><b>Greenville · GVL</b></div>
+        <img src="assets/first-move.png" alt="The Reedy Moving Co crew with their first customers in front of the moving truck" onerror="var f=this.closest('.firstmove');var g=document.querySelector('.about-inner');if(g)g.style.gridTemplateColumns='1fr';if(f)f.style.display='none'">
+        <figcaption>The crew with the family who took a chance on us &mdash; our very first paid move.</figcaption>
+      </figure>
+      <div class="about-letter">
+        <span class="stamp">Letter from the owner</span>
+        <p>I've been moving family and friends since 2011 &mdash; couches, pianos, three apartments for my brother, more truckloads than I can count. In 2026, David and I decided to do it for a living.</p>
+        <p>It's me, David, and a short list of trusted friends when we need a third or fourth set of hands. No franchise. No call center. No subs. When you book, you get our people, on time, treating your stuff like our own, not leaving until it's right.</p>
+        <span class="signoff">Brayden &amp; David / Owner-Operators</span>
+      </div>
     </div>
   </div>
 </section>
@@ -946,6 +940,8 @@
         <div class="wo-sub">// What you get when you book</div>
         <div class="wo-meta">
           <div class="row"><span class="k">Response time</span><span class="v"><span class="good">≤ 24 hours</span> (Mon-Sat)</span></div>
+          <!-- TEMP HIDDEN: Licensed & Insured — remove style="display:none" to restore -->
+          <div class="row" style="display:none"><span class="k">Insurance</span><span class="v">SC Licensed &amp; Insured</span></div>
           <div class="row"><span class="k">Pricing</span><span class="v">Flat hourly, no add-ons</span></div>
           <div class="row"><span class="k">Crew</span><span class="v">Same names, every job</span></div>
           <div class="row"><span class="k">Cancellation</span><span class="v">Free up to 48hr prior</span></div>
@@ -997,7 +993,6 @@
             <label>Services Needed <span class="req">optional</span></label>
             <div class="checks">
               <label class="check"><input type="checkbox" name="svc"> Loading &amp; unloading</label>
-              <label class="check"><input type="checkbox" name="svc"> Packing services</label>
               <label class="check"><input type="checkbox" name="svc"> Furniture disassembly</label>
               <label class="check"><input type="checkbox" name="svc"> Heavy / specialty item</label>
               <label class="check"><input type="checkbox" name="svc"> Stairs / tight access</label>
@@ -1027,41 +1022,16 @@
   </div>
 </section>
 
-<!-- ========== HERITAGE STRIP ("Why Reedy") ========== -->
-<section class="millstrip-sec" data-screen-label="09 Heritage">
-  <div class="wrap">
-    <svg class="bridge-mark" viewBox="0 0 220 150" fill="none" stroke="#c8743f" stroke-width="1.1"
-         stroke-linecap="round" width="200" aria-hidden="true">
-      <path d="M150 14 L116 104"/>
-      <path d="M6 104 Q110 78 214 104" stroke="#cfd2cf" stroke-width="1.4"/>
-      <path d="M150 14 L40 99"/><path d="M150 14 L70 92"/><path d="M150 14 L98 86"/>
-      <path d="M150 14 L126 87"/><path d="M150 14 L160 92"/><path d="M150 14 L196 99"/>
-      <path d="M116 104 L116 118" stroke="#cfd2cf"/><path d="M150 14 L150 8" stroke="#cfd2cf"/>
-      <g stroke="#5a6563" stroke-width="1">
-        <path d="M30 126 L30 138"/><path d="M50 124 L50 137"/><path d="M70 127 L70 139"/>
-        <path d="M90 125 L90 138"/><path d="M110 128 L110 140"/><path d="M130 125 L130 138"/>
-        <path d="M150 127 L150 139"/><path d="M170 125 L170 137"/><path d="M190 127 L190 139"/>
-      </g>
-      <g stroke="#5a6563" stroke-width=".8"><path d="M6 112 L214 112"/>
-        <path d="M6 108 L6 116"/><path d="M214 108 L214 116"/></g>
-    </svg>
-    <div class="millstrip">
-      <div class="lab">// Why "Reedy"</div>
-      <p>The Reedy ran the mills that built this town. We just kept the working part.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ========== FOOTER ========== -->
-<footer data-screen-label="10 Footer">
+<footer data-screen-label="09 Footer">
   <div class="wrap">
     <div class="foot">
       <div class="col">
         <a href="#top" class="logo" style="margin-bottom:18px">
           <span class="logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#faf7f3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="4.5" width="8.5" height="6" stroke-width="1.7"/><rect x="9" y="10.5" width="8.5" height="5.3" stroke-width="1.7"/><path d="M6 3 V19"/><path d="M6 19 H16.5"/><path d="M6 19 L3.4 21.6"/><circle cx="8.4" cy="21.4" r="2" stroke-width="1.7"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#faf7f3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16 Q12 12.4 21 16" stroke-width="1.7"/><path d="M14.6 14.3 L17 4" stroke-width="1.7"/><path d="M17 4 L5 15.3" stroke="#c8743f" stroke-width="1.4"/><path d="M17 4 L9.4 14.1" stroke="#c8743f" stroke-width="1.4"/><path d="M17 4 L13 13.4" stroke="#c8743f" stroke-width="1.4"/><path d="M17 4 L20 14.9" stroke="#c8743f" stroke-width="1.4"/></svg>
           </span>
-          <span class="logo-word">Reedy Moving <span class="co">Co.</span><small style="color:var(--green-hover)">Est. 2026 · Travelers Rest, SC</small></span>
+          <span class="logo-word">Reedy Moving Co.<small style="color:var(--green-hover)">Est. 2026 · GVL</small></span>
         </a>
         <p style="margin-top:14px;max-width:32ch">Locally owned moving labor. Brayden and family. No franchise. No call center.</p>
       </div>
@@ -1081,6 +1051,8 @@
       <div class="col">
         <h5>// On the books</h5>
         <div class="foot-mono">
+          <!-- TEMP HIDDEN: Insured — remove style="display:none" to restore -->
+          <div style="display:none"><span class="k">Insured</span><span class="v">Active</span></div>
           <div><span class="k">Rating</span><span class="v" id="footRating">Pending first review</span></div>
           <div><span class="k">Moves</span><span class="v" id="footMoves">03 Logged</span></div>
           <div><span class="k">Since</span><span class="v">2026</span></div>
@@ -1088,7 +1060,7 @@
       </div>
     </div>
     <div class="foot-bar">
-      <span class="pulse">© 2026 Reedy Moving Co.</span>
+      <span class="pulse">© 2026 Reedy Moving Co</span>
       <span>Built in Travelers Rest · v2.6</span>
     </div>
   </div>
@@ -1185,8 +1157,9 @@
      TRUST FRAMING — swap stats + reviews to honestly reflect "we're new"
      =================================================================== */
   const TWEAKS = /*EDITMODE-BEGIN*/{
-    "trustMode": "dayone",
-    "reviewMode": "vouches",
+    "trustMode": "honest",
+    "reviewMode": "customers",
+    "headline": "heavy",
     "honestSubline": true
   }/*EDITMODE-END*/;
 
@@ -1200,46 +1173,46 @@
         {idx:'// 01', num:'15<sub>yrs</sub>', lab:'Moving Family<br>&amp; Friends'},
         {idx:'// 02', num:'02<sub>+</sub>', lab:'Named Crew<br>On Call'},
         {idx:'// 03', num:'$0', lab:'Down To<br>Book'},
-        {idx:'// 04', num:'05', lab:'Founding Slots<br>Open Below ▾', cls:'you'}
+        {idx:'// 04', num:'04', lab:'Founding Slots<br>Open Below ▾', cls:'you'}
       ],
-      foot: '* Zero paid moves yet, and we\'re not hiding it. Fifteen years moving people we love &mdash; you\'d be the first we move for money.'
+      foot: '* One paid move in the books &mdash; the rest of our fifteen years has been for family. The founding offer below is how we earn the next four.'
     },
     honest: {
       cells: [
-        {idx:'// 01', num:'03',        lab:'Paid Moves<br>This Season'},
+        {idx:'// 01', num:'01',        lab:'Paid Move<br>So Far'},
         {idx:'// 02', num:'27<sub>+</sub>', lab:'Moves For Family<br>&amp; Ourselves'},
         {idx:'// 03', num:'24<sub>hr</sub>', lab:'Quote<br>Turnaround'},
         {idx:'// 04', num:'$0',        lab:'Hidden<br>Fees, Ever'}
       ],
-      foot: '* Three paid jobs and counting. We know the number. We say it on purpose.'
+      foot: '* One paid job so far &mdash; and we\'ll tell you exactly how it went. We\'d rather earn the second than fake the fiftieth.'
     },
     founding: {
       cells: [
-        {idx:'// RES', num:'<span class="sm">#</span>04', lab:'Your Customer<br>Number, Reserved', cls:'you'},
-        {idx:'// 02', num:'03', lab:'Booked Ahead<br>Of You'},
+        {idx:'// RES', num:'<span class="sm">#</span>02', lab:'Your Customer<br>Number, Reserved', cls:'you'},
+        {idx:'// 02', num:'01', lab:'Booked Ahead<br>Of You'},
         {idx:'// 03', num:'24<sub>hr</sub>', lab:'Quote<br>Turnaround'},
         {idx:'// 04', num:'$0', lab:'Hidden<br>Fees, Ever'}
       ],
-      foot: '* You\'d be customer #04. The first three got our undivided attention. So will you.'
+      foot: '* You\'d be customer #02. The first one got our undivided attention. So will you.'
     },
     log: {
       cells: [
-        {idx:'// JOB 001', num:'<span class="sm">✓</span>', lab:'Aug \'25<br>2BR · 3 mo.'},
-        {idx:'// JOB 002', num:'<span class="sm">✓</span>', lab:'Sep \'25<br>Truck load · 2 hr'},
-        {idx:'// JOB 003', num:'<span class="sm">✓</span>', lab:'Oct \'25<br>Piano · Augusta Rd.'},
-        {idx:'// JOB 004', num:'<span class="sm">▸</span><span class="arrow">YOU?</span>', lab:'Date pending<br>Slot open', cls:'you'}
+        {idx:'// JOB 001', num:'<span class="sm">✓</span>', lab:'Aug \'25<br>2BR · North Main'},
+        {idx:'// JOB 002', num:'<span class="sm">▸</span><span class="arrow">YOU?</span>', lab:'Date pending<br>Slot open', cls:'you'},
+        {idx:'// 03', num:'24<sub>hr</sub>', lab:'Quote<br>Turnaround'},
+        {idx:'// 04', num:'$0', lab:'Hidden<br>Fees, Ever'}
       ],
-      foot: '* Yes, the whole list. We\'re a new crew. Better to count to three honestly than to four-hundred dishonestly.'
+      foot: '* One job done, done right. We\'re a new crew — better to count to one honestly than to four-hundred dishonestly.'
     },
     footnoted: {
       // Looks closest to a "normal" stats bar, but the number is honest and there's a tiny wink underneath.
       cells: [
-        {idx:'// 01', num:'03<sup style="font-family:JetBrains Mono,monospace;font-size:18px;vertical-align:super;font-weight:500">*</sup>', lab:'Moves<br>Logged'},
-        {idx:'// 02', num:'5.0', lab:'Star Average<br>(All Three)'},
+        {idx:'// 01', num:'01<sup style="font-family:JetBrains Mono,monospace;font-size:18px;vertical-align:super;font-weight:500">*</sup>', lab:'Move<br>Logged'},
+        {idx:'// 02', num:'5.0', lab:'Star Average<br>(The One)'},
         {idx:'// 03', num:'24<sub>hr</sub>', lab:'Quote<br>Turnaround'},
         {idx:'// 04', num:'$0', lab:'Hidden<br>Fees, Ever'}
       ],
-      foot: '* Yes, only three. We\'re picky about saying yes — and you\'d notice if we weren\'t.'
+      foot: '* Yes, only one. We\'re picky about saying yes — and you\'d notice if we weren\'t.'
     }
   };
 
@@ -1258,51 +1231,22 @@
 
   // ---- Review variants ----
   const REVIEWS = {
-    // Day-one: pure vouches from family/friends. No fake job IDs, no stars.
-    vouches: {
-      headline: 'Vouches.<br>From Day One.',
-      sub: 'Family &middot; friends &middot; people we\'ve moved long before anyone paid us',
-      marker: '0 paid · these are vouches',
-      cards: [
-        {id:'VOUCH #01', date:'Mom · since 2011', tag:'FAMILY (BIASED)', stars:false,
-         body:'I\'m his mother so consider the source, but Brayden has moved my kitchen twice and my piano once and never broke a dish. I pay him in lasagna and gas money. He\'s the same kid who used to organize my pantry by can size.',
-         name:'Mom', meta:'Taylors<br>Paid in: lasagna'},
-        {id:'VOUCH #02', date:'David · crew partner', tag:'CREW', stars:false,
-         body:'I\'m on the crew, but I\'m also the guy you call when you need somebody who actually shows up. Brayden and I have moved more couches than I can count. He\'s slow with his shoulder but careful with your stuff. That\'s the trade.',
-         name:'David', meta:'Greenville<br>Crew · since 2018'},
-        {id:'VOUCH #03', date:'Drew · brother', tag:'FAMILY (HONEST)', stars:false,
-         body:'He\'s my brother. He\'s also helped me move three times and I\'ve helped him move twice. He\'s the only person I\'d trust with my record collection or my kid\'s crib. He shows up. Hire him.',
-         name:'Drew', meta:'Simpsonville<br>Paid in: BBQ &amp; beer'},
-        {id:'VOUCH #04', date:'Aunt Carla · 2022', tag:'FAMILY (BLUNT)', stars:false,
-         body:'I\'d tell you if they were bad at it. They\'re not. They moved my whole house when I downsized and didn\'t complain about the eleven boxes of yarn. Call them.',
-         name:'Aunt Carla', meta:'Easley<br>Paid in: hugs &amp; tomatoes'},
-        {id:'VOUCH #05', date:'Coach Pete · 2019', tag:'FRIEND', stars:false,
-         body:'Brayden helped me load a 16-foot truck the day my wife went into labor. Two hours. No complaints. Didn\'t ask for a dime. That tells you everything.',
-         name:'Pete H.', meta:'Greer<br>Paid in: nothing, at the time'}
-      ]
-    },
     // Real paying customers only — clean, professional version
     customers: {
-      headline: 'Our First<br>Three Customers.',
+      headline: 'Our First<br>Customer.',
       sub: 'Booked &middot; paid &middot; happy &middot; written by them',
-      marker: '03 jobs · 03 five-stars',
+      marker: '01 job · 01 five-star',
       cards: [
         {id:'JOB #001', date:'Aug 2025 · 5.0★', stars:true,
          body:'We were the lucky first call. Brayden and his guys showed up early, took apart our bed frame without being asked, and got us into the new place before lunch. Felt like family helping us move, not strangers.',
-         name:'Sara M.', meta:'North Main<br>2BR · 3hr · 3 movers'},
-        {id:'JOB #002', date:'Sep 2025 · 5.0★', stars:true,
-         body:'Hired them to load a U-Haul after another company no-showed. Brayden picked up the phone same morning. They packed it tighter than I would have and didn\'t leave anything behind.',
-         name:'David R.', meta:'Simpsonville<br>Load only · 2hr · 2 movers'},
-        {id:'JOB #003', date:'Oct 2025 · 5.0★', stars:true,
-         body:'Baby grand. Two other movers wouldn\'t even quote us. Brayden came out, measured the doorway, and moved it without a single scratch. We\'ll call them for the next one.',
-         name:'Jennifer &amp; Sam T.', meta:'Augusta Road<br>Piano · 1.5hr · 4 movers'}
+         name:'Sara M.', meta:'North Main<br>2BR · 3hr · 3 movers'}
       ]
     },
     // Mixed: real customers + family who watched the whole thing
     mixed: {
       headline: 'Receipts.<br>Sort Of.',
-      sub: 'Three real customers · three family witnesses · we\'ll tell you which is which',
-      marker: '03 paid · 03 family · 0 fake',
+      sub: 'One real customer · family who\'ve watched us work · we\'ll tell you which is which',
+      marker: '01 paid · 03 family · 0 fake',
       cards: [
         {id:'JOB #001', date:'Aug 2025 · 5.0★', stars:true, tag:'PAID CUSTOMER',
          body:'We were the lucky first call. Showed up early, took apart our bed frame without being asked, and got us in the new place before lunch. Felt like family helping us move.',
@@ -1310,15 +1254,9 @@
         {id:'KIN #001', date:'Mom · 2024', stars:true, tag:'FAMILY (BIASED)',
          body:'I\'m his mother so take this with a grain of salt, but Brayden has moved my kitchen twice and my piano once and never broke a dish. I pay in lasagna and gas money. Worth it.',
          name:'Mom', meta:'Taylors<br>Paid in: lasagna'},
-        {id:'JOB #002', date:'Sep 2025 · 5.0★', stars:true, tag:'PAID CUSTOMER',
-         body:'Hired them to load a U-Haul after another company no-showed. Picked up the phone the same morning. Packed it tighter than I would have and didn\'t leave anything behind.',
-         name:'David R.', meta:'Simpsonville<br>Load only · 2hr · 2 movers'},
         {id:'KIN #002', date:'Drew · 2023', stars:true, tag:'FAMILY (HONEST)',
          body:'He\'s my brother. I\'ve helped him move three times and he\'s helped me move twice. He\'s the only person I\'d trust with my record collection. Hire him.',
          name:'Drew', meta:'Simpsonville<br>Paid in: BBQ &amp; beer'},
-        {id:'JOB #003', date:'Oct 2025 · 5.0★', stars:true, tag:'PAID CUSTOMER',
-         body:'Baby grand. Two other movers wouldn\'t even quote us. Brayden came out, measured the doorway, and moved it without a scratch. We\'ll call them for the next one.',
-         name:'Jennifer &amp; Sam T.', meta:'Augusta Road<br>Piano · 1.5hr · 4 movers'},
         {id:'KIN #003', date:'Aunt Carla · 2022', stars:true, tag:'FAMILY (BLUNT)',
          body:'I\'d tell you if they were bad at it. They\'re not. They moved my whole house when I downsized and didn\'t complain about the boxes of yarn. Call them.',
          name:'Aunt Carla', meta:'Easley<br>Paid in: hugs &amp; tomatoes'}
@@ -1327,7 +1265,7 @@
   };
 
   function renderReviews(mode){
-    const v = REVIEWS[mode] || REVIEWS.mixed;
+    const v = REVIEWS[mode] || REVIEWS.customers;
     document.getElementById('rvHeadline').innerHTML = v.headline;
     document.getElementById('rvSub').textContent = v.sub.replace(/&middot;/g,'·').replace(/&middot;/g,'·');
     document.getElementById('rvSub').innerHTML = v.sub;
@@ -1349,15 +1287,28 @@
   }
 
   function renderFootStat(mode){
-    const map = {dayone:'05 Founding Slots', honest:'03 Paid · 27+ Family', founding:'You\'d Be #04', log:'003 / 003 ✓', footnoted:'03 Logged*'};
-    document.getElementById('footMoves').textContent = map[mode] || '03 Logged';
-    const ratingMap = {dayone:'Pending first review', honest:'5.0 / 5.0 (3)', founding:'Pending first review', log:'5.0 / 5.0 (3)', footnoted:'5.0 / 5.0 (3)'};
+    const map = {dayone:'04 Founding Slots', honest:'01 Paid · 27+ Family', founding:'You\'d Be #02', log:'001 done · ✓', footnoted:'01 Logged*'};
+    document.getElementById('footMoves').textContent = map[mode] || '01 Logged';
+    const ratingMap = {dayone:'Pending first review', honest:'5.0 / 5.0 (1)', founding:'5.0 / 5.0 (1)', log:'5.0 / 5.0 (1)', footnoted:'5.0 / 5.0 (1)'};
     const r = document.getElementById('footRating');
     if (r) r.textContent = ratingMap[mode] || 'Pending first review';
   }
 
+  // ---- Hero headline variants (short rows so the display type fits) ----
+  const HEADLINES = {
+    heavy:   '<span class="row">We Do</span><span class="row shift">The <span class="accent">Heavy</span></span><span class="row">Lifting.</span>',
+    lightly: '<span class="row">Heavy</span><span class="row shift">Lifting,</span><span class="row"><span class="accent">Lightly</span>.</span>',
+    carried: '<span class="row">Carried</span><span class="row shift">Like It\'s</span><span class="row"><span class="accent">Ours</span>.</span>',
+    upstate: '<span class="row">We Move</span><span class="row shift">The</span><span class="row"><span class="accent">Upstate</span>.</span>'
+  };
+  function renderHeadline(mode){
+    const el = document.getElementById('heroHeadline');
+    if (el) el.innerHTML = HEADLINES[mode] || HEADLINES.heavy;
+  }
+
   function applyTweaks(){
     document.body.dataset.trust = TWEAKS.trustMode;
+    renderHeadline(TWEAKS.headline);
     renderStats(TWEAKS.trustMode);
     renderReviews(TWEAKS.reviewMode);
     renderFootStat(TWEAKS.trustMode);
@@ -1376,13 +1327,23 @@
       <button class="tp-close" aria-label="Close tweaks">×</button>
     </div>
     <div class="tp-section">
+      <div class="tp-label">Hero headline</div>
+      <div class="tp-help">Brawn, or a lighter touch?</div>
+      <div class="tp-radio" data-key="headline">
+        <button data-val="heavy"><b>We Do The Heavy Lifting.</b><span>The original. Strong &mdash; but a common mover line.</span></button>
+        <button data-val="lightly"><b>Heavy Lifting, Lightly.</b><span>Keeps the literal line, adds finesse. Heavy work, light touch.</span></button>
+        <button data-val="carried"><b>Carried Like It's Ours.</b><span>Your own voice. Warm, not brawny.</span></button>
+        <button data-val="upstate"><b>We Move The Upstate.</b><span>Place-pride. Quiet confidence, pairs with the Reedy story.</span></button>
+      </div>
+    </div>
+    <div class="tp-section">
       <div class="tp-label">Stats framing</div>
       <div class="tp-help">How we play "we're new" in the green bar</div>
       <div class="tp-radio" data-key="trustMode">
         <button data-val="dayone"><b>Day one (zero paid)</b><span>15 yrs family · founding slot offer below. Full transparency.</span></button>
-        <button data-val="honest"><b>Honest counter</b><span>03 paid &middot; 27+ family. The contrast does the work.</span></button>
-        <button data-val="founding"><b>Founding customer</b><span>"You'd be #04." Reframes new as exclusive.</span></button>
-        <button data-val="log"><b>Job log</b><span>JOB 001 · 002 · 003 · 004 YOU? — the visual <i>is</i> the receipt.</span></button>
+        <button data-val="honest"><b>Honest counter</b><span>01 paid &middot; 27+ family. The contrast does the work.</span></button>
+        <button data-val="founding"><b>Founding customer</b><span>"You'd be #02." Reframes new as exclusive.</span></button>
+        <button data-val="log"><b>Job log</b><span>JOB 001 done · 002 YOU? — the visual <i>is</i> the receipt.</span></button>
         <button data-val="footnoted"><b>Footnoted wink</b><span>Looks normal. Tiny dry footnote owns the count.</span></button>
       </div>
     </div>
@@ -1390,8 +1351,7 @@
       <div class="tp-label">Reviews voice</div>
       <div class="tp-help">Who we put in the rail</div>
       <div class="tp-radio" data-key="reviewMode">
-        <button data-val="vouches"><b>Vouches only</b><span>Family &amp; friends, no fake job IDs, no stars. Pairs with Day One.</span></button>
-        <button data-val="customers"><b>Customers only</b><span>The three paid jobs. "Our first three."</span></button>
+        <button data-val="customers"><b>Customers only</b><span>The one paid job. "Our first customer."</span></button>
         <button data-val="mixed"><b>Mixed + honest tags</b><span>Customers + Mom, brother, Aunt Carla. Labeled clearly.</span></button>
       </div>
     </div>
