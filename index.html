@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Movers in Greenville, SC | Reedy Moving Co.</title>
-<meta name="description" content="Local labor-only movers serving Greenville, Greer, Simpsonville &amp; Travelers Rest. Hourly rates with a written not-to-exceed cap, no truck needed — loading, unloading, packing. Free quote within 24 hours.">
+<meta name="description" content="Local labor-only movers serving Greenville, Greer, Simpsonville &amp; Travelers Rest. Hourly rates with a written not-to-exceed cap, no truck needed: loading, unloading, packing. Free quote within 24 hours.">
 
 <!-- Open Graph (link previews + agent metadata) -->
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
     "itemListElement": [
       {
         "@type": "Offer",
-        "name": "2 Movers — Light Load",
+        "name": "2 Movers, Light Load",
         "description": "Best for studios & small 1-bedrooms. Labor only, no truck.",
         "priceCurrency": "USD",
         "price": "149",
@@ -69,7 +69,7 @@
       },
       {
         "@type": "Offer",
-        "name": "3 Movers — Standard",
+        "name": "3 Movers, Standard",
         "description": "Best for 2–3 bedroom homes. Most booked.",
         "priceCurrency": "USD",
         "price": "199",
@@ -82,7 +82,7 @@
       },
       {
         "@type": "Offer",
-        "name": "4 Movers — Heavy",
+        "name": "4 Movers, Heavy",
         "description": "Best for 4-bedroom & larger homes, piano/heavy items.",
         "priceCurrency": "USD",
         "price": "269",
@@ -171,7 +171,7 @@
   .btn-block{width:100%}
   .btn .arrow{width:14px;height:14px}
 
-  /* Section marker — § 01 / HERO */
+  /* Section marker - § 01 / HERO */
   .sect-marker{display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:48px}
   .sect-marker .glyph{font-size:13px;color:var(--ink)}
   .sect-marker .name{color:var(--ink)}
@@ -324,7 +324,7 @@
   .tier ul li.incl .v{color:var(--green)}
   .tier ul li.incl .v::before{content:"✓ "}
   .tier ul li.excl .v{color:var(--muted)}
-  .tier ul li.excl .v::before{content:"— "}
+  .tier ul li.excl .v::before{content:"- "}
   .tier .btn{margin-top:8px}
 
   .tier.feature{background:var(--ink);color:var(--cream)}
@@ -346,7 +346,7 @@
   .estimate-foot .cell:last-child{border-right:0}
   .estimate-foot .cell .k{color:var(--muted);letter-spacing:.2em;text-transform:uppercase;font-size:10px;flex:0 0 auto}
 
-  /* ---------- REVIEWS (Receipts — horizontal rail) ---------- */
+  /* ---------- REVIEWS (Receipts - horizontal rail) ---------- */
   .reviews{padding:88px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
   .rv-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:36px;gap:32px}
   .rv-head h2{font-size:clamp(56px,7vw,108px)}
@@ -576,7 +576,7 @@
 <!-- ========== TOP TAPE ========== -->
 <div class="topbar" data-screen-label="Topbar">
   <div class="topbar-inner">
-    <span class="pulse">Booking moves for week of <span id="weekOf">June 1</span></span>
+    <span class="pulse" id="bookingBanner">Now booking · Mon-Sat</span>
     <span>Owner-operated · Travelers Rest, SC</span>
     <span>Call 864.280.7243</span>
   </div>
@@ -602,11 +602,11 @@
       <a href="#how"><span>01</span>How</a>
       <a href="#services"><span>02</span>Services</a>
       <a href="#pricing"><span>03</span>Rates</a>
-      <!-- TEMP HIDDEN: Reviews — re-enable by removing style="display:none" here and on <section id="reviews"> -->
+      <!-- TEMP HIDDEN: Reviews - re-enable by removing style="display:none" here and on <section id="reviews"> -->
       <a href="#reviews" style="display:none"><span>04</span>Reviews</a>
       <a href="#about"><span>05</span>Crew</a>
     </div>
-    <a href="#quote" class="btn btn-primary">Open Work Order
+    <a href="#quote" class="btn btn-primary">Get a Quote
       <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
     </a>
   </div>
@@ -725,7 +725,7 @@
       <span class="right">Four Steps · No Surprises</span>
     </div>
     <div class="how-head">
-      <h2 class="display">Show Up.<br>Wrap It.<br>Done.</h2>
+      <h2 class="display">One Call.<br>One Cap.<br>One Crew.</h2>
       <p class="sub" style="font-size:18px;line-height:1.55;color:var(--ink-soft);max-width:46ch">From the first call to the last box in place, the process is the same every time. You always know who's coming and what it costs.</p>
     </div>
     <div class="how-rows">
@@ -819,7 +819,7 @@
     </div>
     <div class="price-head">
       <h2 class="display">Capped Quotes.<br>No Games.</h2>
-      <p class="sub" style="font-size:17px;color:var(--ink-soft);max-width:42ch;align-self:end">The clock starts when we get to your door and stops when the last box is set down. Every quote comes with a written cap — runs long, that's on us; runs short, you pay less.</p>
+      <p class="sub" style="font-size:17px;color:var(--ink-soft);max-width:42ch;align-self:end">The clock starts when we get to your door and stops when the last box is set down. Every quote comes with a written cap. Runs long, that's on us; runs short, you pay less.</p>
     </div>
 
     <div class="estimate">
@@ -909,19 +909,19 @@
       <figure class="firstmove">
         <div class="fm-cap"><span>// FORM PH-01 · FIRST MOVE</span><b>Greenville · GVL</b></div>
         <img src="assets/first-move.jpg" alt="The Reedy Moving Co crew with their first customers in front of the moving truck" onerror="var f=this.closest('.firstmove');var g=document.querySelector('.about-inner');if(g)g.style.gridTemplateColumns='1fr';if(f)f.style.display='none'">
-        <figcaption>The crew with the family who took a chance on us &mdash; our very first paid move.</figcaption>
+        <figcaption>The crew with the family who took a chance on us. Our very first paid move.</figcaption>
       </figure>
       <div class="about-letter">
         <span class="stamp">From the Owners</span>
         <div class="owner-note">
           <p>I'm 22 and I've been the guy people call to help them move since I was old enough to lift a couch. Friends, family, friends of family. Somewhere in there I realized I was better at it than most crews people were paying.</p>
           <p>David asked if I wanted to build something that matters. Moving day is a big day, and I wanted to be the crew that treats it that way. So it's my name on the work order, my crew at your door, and I don't leave until it's placed right.</p>
-          <span class="signoff">— Brayden, Owner-Operator</span>
+          <span class="signoff">Brayden, Owner-Operator</span>
         </div>
         <div class="owner-note">
           <p>This company exists because of my own move. I was quoted one number and billed another, and by then my stuff was already on the truck. Nothing about it was illegal. It was just how the industry works, and I didn't think it had to.</p>
           <p>So we built ours around one rule: every quote comes with a written cap. Job runs long, we cover it. Brayden runs the crews. I make sure the number holds.</p>
-          <span class="signoff">— David, Owner-Operator</span>
+          <span class="signoff">David, Owner-Operator</span>
         </div>
       </div>
     </div>
@@ -948,10 +948,10 @@
         <div class="wo-sub">// What you get when you book</div>
         <div class="wo-meta">
           <div class="row"><span class="k">Response time</span><span class="v"><span class="good">≤ 24 hours</span> (Mon-Sat)</span></div>
-          <!-- TEMP HIDDEN: Licensed & Insured — remove style="display:none" to restore -->
+          <!-- TEMP HIDDEN: Licensed & Insured - remove style="display:none" to restore -->
           <div class="row" style="display:none"><span class="k">Insurance</span><span class="v">SC Licensed &amp; Insured</span></div>
           <div class="row"><span class="k">Pricing</span><span class="v">Hourly rate + written cap, no add-ons</span></div>
-          <div class="row"><span class="k">Crew</span><span class="v">Same names, every job</span></div>
+          <div class="row"><span class="k">Crew</span><span class="v">Owner on every job. No subs.</span></div>
           <div class="row"><span class="k">Cancellation</span><span class="v">Free up to 48hr prior</span></div>
         </div>
         <div class="wo-bullets">
@@ -974,7 +974,7 @@
           </div>
           <div class="form-row">
             <div class="field"><label>Phone <span class="req">req</span></label><input id="ph" type="tel" placeholder="(864) 280-7243" required></div>
-            <div class="field"><label>Email <span class="req">req</span></label><input id="em" type="email" placeholder="you@email.com" required></div>
+            <div class="field"><label>Email <span class="req">optional</span></label><input id="em" type="email" placeholder="you@email.com"></div>
           </div>
           <div class="form-row">
             <div class="field"><label>Moving From <span class="req">req</span></label><input id="from" type="text" placeholder="Street, City" required></div>
@@ -1047,7 +1047,7 @@
         <h5>// Contact</h5>
         <a href="tel:8642807243">864.280.7243</a>
         <a href="mailto:David@reedymoving.com">David@reedymoving.com</a>
-        <p>Mon — Sat / 7am to 7pm</p>
+        <p>Mon-Sat / 7am to 7pm</p>
       </div>
       <div class="col">
         <h5>// Service Area</h5>
@@ -1059,7 +1059,7 @@
       <div class="col">
         <h5>// On the books</h5>
         <div class="foot-mono">
-          <!-- TEMP HIDDEN: Insured — remove style="display:none" to restore -->
+          <!-- TEMP HIDDEN: Insured - remove style="display:none" to restore -->
           <div style="display:none"><span class="k">Insured</span><span class="v">Active</span></div>
           <div><span class="k">Rating</span><span class="v" id="footRating">Pending first review</span></div>
           <div><span class="k">Damage claims</span><span class="v">0</span></div>
@@ -1146,25 +1146,27 @@
       success.classList.add('show');
     } catch (err) {
       if (btn) btn.disabled = false;
-      alert("Sorry — we couldn't send your request just now. Please call (864) 280-7243 or try again in a moment.");
+      alert("Sorry, we couldn't send your request just now. Please call (864) 280-7243 or try again in a moment.");
     }
   });
 
-  // Dynamic "week of" date in topbar — always shows the current week's Monday.
+  // Topbar banner: dynamic "week of" (this week's Monday). Evergreen fallback ("Now booking · Mon-Sat") stays if JS is off.
   (() => {
     try {
+      const el = document.getElementById('bookingBanner');
+      if (!el) return;
       const d = new Date();
       const day = d.getDay(); // 0 Sun..6 Sat
-      const diff = (1 - day + 7) % 7; // next Monday
+      const diff = (1 - day + 7) % 7; // this week's Monday
       const target = new Date(d);
       target.setDate(d.getDate() + diff);
       const mo = target.toLocaleString('en-US', {month:'short'});
-      document.getElementById('weekOf').textContent = mo + ' ' + target.getDate();
+      el.textContent = 'Booking moves · week of ' + mo + ' ' + target.getDate();
     } catch(_) {}
   })();
 
   /* ===================================================================
-     TRUST FRAMING — swap stats + reviews to honestly reflect "we're new"
+     TRUST FRAMING - swap stats + reviews to honestly reflect "we're new"
      =================================================================== */
   const TWEAKS = /*EDITMODE-BEGIN*/{
     "trustMode": "dayone",
@@ -1177,7 +1179,7 @@
   const STAR = '<svg viewBox="0 0 24 24"><path d="M12 2 L15 9 L22 9.5 L17 14.5 L18.5 22 L12 18 L5.5 22 L7 14.5 L2 9.5 L9 9 Z"/></svg>';
   const STARS5 = `<div class="stars" aria-label="5 stars">${STAR.repeat(5)}</div>`;
 
-  // Stats bar shows verifiable claims only — no move count, no experience-years claim.
+  // Stats bar shows verifiable claims only - no move count, no experience-years claim.
   const VERIFIABLE_STATS = {
     cells: [
       {idx:'// 01', num:'0',                     lab:'Damage<br>Claims'},
@@ -1205,7 +1207,7 @@
 
   // ---- Review variants ----
   const REVIEWS = {
-    // Real paying customers only — clean, professional version
+    // Real paying customers only - clean, professional version
     customers: {
       headline: 'Our First<br>Customer.',
       sub: 'Booked &middot; paid &middot; happy &middot; written by them',
@@ -1261,7 +1263,7 @@
   }
 
   function renderFootStat(){
-    /* Footer "On the books" is static now — damage claims / overages / response / since.
+    /* Footer "On the books" is static now - damage claims / overages / response / since.
        Rating stays "Pending first review" (in the markup) until a real review is posted. */
   }
 
@@ -1321,7 +1323,7 @@
       <div class="tp-label">Hero headline</div>
       <div class="tp-help">Brawn, or a lighter touch?</div>
       <div class="tp-radio" data-key="headline">
-        <button data-val="heavy"><b>We Do The Heavy Lifting.</b><span>The original. Strong &mdash; but a common mover line.</span></button>
+        <button data-val="heavy"><b>We Do The Heavy Lifting.</b><span>The original. Strong, but a common mover line.</span></button>
         <button data-val="lightly"><b>Heavy Lifting, Lightly.</b><span>Keeps the literal line, adds finesse. Heavy work, light touch.</span></button>
         <button data-val="carried"><b>Carried Like It's Ours.</b><span>Your own voice. Warm, not brawny.</span></button>
         <button data-val="upstate"><b>We Move The Upstate.</b><span>Place-pride. Quiet confidence, pairs with the Reedy story.</span></button>
@@ -1354,7 +1356,7 @@
         <button data-val="false">Off</button>
       </div>
     </div>
-    <div class="tp-foot">Brayden's notes — these all rewrite real copy. Pick one, ship it, or mix.</div>
+    <div class="tp-foot">Brayden's notes: these all rewrite real copy. Pick one, ship it, or mix.</div>
   `;
   document.body.appendChild(tweaksPanel);
 
@@ -1384,7 +1386,7 @@
     #tweaksPanel .tp-toggle button.on{background:var(--ink);color:var(--cream)}
     #tweaksPanel .tp-foot{padding:10px 14px;background:var(--paper);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.04em;border-top:1px solid var(--line)}
 
-    /* Receipt tag — inline strip between header & body */
+    /* Receipt tag - inline strip between header & body */
     .receipt-tag{display:block;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:6px 22px;border-bottom:1px dashed var(--line-dark)}
     .receipt.kin{border-color:var(--ink);background:#fbf6e8}
     .receipt.kin .receipt-top .id{color:var(--ink)}
