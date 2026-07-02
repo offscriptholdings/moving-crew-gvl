@@ -378,6 +378,8 @@
   .about .signoff{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--green)}
   .about .signoff::before,.about .signoff::after{content:"";width:48px;height:1px;background:var(--line-dark)}
   .about-letter .signoff{justify-content:flex-start}
+  .owner-note{display:flex;flex-direction:column;gap:14px}
+  .owner-note + .owner-note{border-top:1px dashed var(--line-dark);padding-top:22px}
   /* First-move photo card */
   .firstmove{align-self:center;justify-self:center;width:100%;max-width:340px;background:var(--paper);border:1px solid var(--ink);text-align:left;margin:0;position:relative}
   .firstmove::after{content:"";position:absolute;right:-5px;bottom:-5px;width:12px;height:12px;background:var(--green)}
@@ -664,21 +666,21 @@
       <span class="spacer"></span>
       <span class="name">Founding Customer Offer</span>
       <span class="spacer"></span>
-      <span class="right">04 / 05 slots open</span>
+      <span class="right" id="foSlotMarker">04 / 05 slots open</span>
     </div>
     <div class="fo-card">
       <div class="fo-left">
         <div class="fo-stamp">Form FC-26</div>
         <div class="fo-eye">// Day One Deal &middot; expires when filled</div>
         <h3 class="display fo-h">Our First Five<br><span class="accent">Get 20% Off.</span></h3>
-        <p class="fo-blurb">We're a new paid crew with fifteen years of moving family between us. We need our first five real bookings to build a real reputation &mdash; so here's the deal, straight up.</p>
-        <div class="fo-counter">
+        <p class="fo-blurb">We're a new crew and somebody has to go first. So here's the deal, straight up. No conditions, no fine print.</p>
+        <div class="fo-counter" id="foCounter">
           <span class="fo-dot filled"></span>
           <span class="fo-dot open"></span>
           <span class="fo-dot open"></span>
           <span class="fo-dot open"></span>
           <span class="fo-dot open"></span>
-          <span class="fo-counter-lab">4 of 5 founding slots open</span>
+          <span class="fo-counter-lab" id="foSlotLabel">4 of 5 founding slots open</span>
         </div>
         <div class="fo-cta">
           <a href="#quote" class="btn btn-primary btn-lg">Claim a Founding Slot
@@ -692,18 +694,17 @@
           <div class="fo-col">
             <div class="fo-col-h">✓ &nbsp; What You Get</div>
             <ul class="fo-list">
-              <li><b>20% off the hourly rate</b><span>All crew sizes. All services. No catch.</span></li>
-              <li><b>Founding rate, locked for life</b><span>Any future move you book with us, the founding rate stays. Even after we get busy.</span></li>
-              <li><b>Written guarantee</b><span>Anything breaks, runs late, or goes sideways &mdash; we eat the difference. Signed, on the work order.</span></li>
-              <li><b>Brayden on every job</b><span>Owner shows up. No subs. No bait-and-switch.</span></li>
+              <li><b>20% off the hourly rate</b><span>All crew sizes. All services.</span></li>
+              <li><b>Founding rate, locked for life</b><span>Any future move you book with us keeps the founding rate. Even after we get busy.</span></li>
+              <li><b>Written cap on every quote</b><span>Job runs long, we cover the difference. On the work order, in writing.</span></li>
+              <li><b>Owner on every job</b><span>Brayden shows up. No subs.</span></li>
             </ul>
           </div>
           <div class="fo-col">
             <div class="fo-col-h">→ &nbsp; What We Ask</div>
             <ul class="fo-list">
-              <li><b>One honest review</b><span>Google or wherever. <em>Honest</em> is the word &mdash; write what actually happened.</span></li>
               <li><b>Permission to use photos</b><span>A few before/after shots of the move. Faces blurred if you want.</span></li>
-              <li><b>Tell one friend</b><span>Only if we earn it. We're not asking you to lie.</span></li>
+              <li><b>Tell one friend</b><span>Only if we earn it.</span></li>
             </ul>
           </div>
         </div>
@@ -911,10 +912,17 @@
         <figcaption>The crew with the family who took a chance on us &mdash; our very first paid move.</figcaption>
       </figure>
       <div class="about-letter">
-        <span class="stamp">Letter from the owner</span>
-        <p>I've been moving family and friends since 2011 &mdash; couches, pianos, three apartments for my brother, more truckloads than I can count. In 2026, David and I decided to do it for a living.</p>
-        <p>It's me, David, and a short list of trusted friends when we need a third or fourth set of hands. No franchise. No call center. No subs. When you book, you get our people, on time, treating your stuff like our own, not leaving until it's right.</p>
-        <span class="signoff">Brayden &amp; David / Owner-Operators</span>
+        <span class="stamp">From the Owners</span>
+        <div class="owner-note">
+          <p>I'm 22 and I've been the guy people call to help them move since I was old enough to lift a couch. Friends, family, friends of family. Somewhere in there I realized I was better at it than most crews people were paying.</p>
+          <p>David asked if I wanted to build something that matters. Moving day is a big day, and I wanted to be the crew that treats it that way. So it's my name on the work order, my crew at your door, and I don't leave until it's placed right.</p>
+          <span class="signoff">— Brayden, Owner-Operator</span>
+        </div>
+        <div class="owner-note">
+          <p>This company exists because of my own move. I was quoted one number and billed another, and by then my stuff was already on the truck. Nothing about it was illegal. It was just how the industry works, and I didn't think it had to.</p>
+          <p>So we built ours around one rule: every quote comes with a written cap. Job runs long, we cover it. Brayden runs the crews. I make sure the number holds.</p>
+          <span class="signoff">— David, Owner-Operator</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1054,7 +1062,9 @@
           <!-- TEMP HIDDEN: Insured — remove style="display:none" to restore -->
           <div style="display:none"><span class="k">Insured</span><span class="v">Active</span></div>
           <div><span class="k">Rating</span><span class="v" id="footRating">Pending first review</span></div>
-          <div><span class="k">Moves</span><span class="v" id="footMoves">03 Logged</span></div>
+          <div><span class="k">Damage claims</span><span class="v">0</span></div>
+          <div><span class="k">Overages billed</span><span class="v">$0</span></div>
+          <div><span class="k">Response</span><span class="v">&lt; 24 hrs</span></div>
           <div><span class="k">Since</span><span class="v">2026</span></div>
         </div>
       </div>
@@ -1157,64 +1167,28 @@
      TRUST FRAMING — swap stats + reviews to honestly reflect "we're new"
      =================================================================== */
   const TWEAKS = /*EDITMODE-BEGIN*/{
-    "trustMode": "honest",
+    "trustMode": "dayone",
     "reviewMode": "customers",
     "headline": "heavy",
-    "honestSubline": true
+    "honestSubline": false
   }/*EDITMODE-END*/;
 
   // ---- Stats variants ----
   const STAR = '<svg viewBox="0 0 24 24"><path d="M12 2 L15 9 L22 9.5 L17 14.5 L18.5 22 L12 18 L5.5 22 L7 14.5 L2 9.5 L9 9 Z"/></svg>';
   const STARS5 = `<div class="stars" aria-label="5 stars">${STAR.repeat(5)}</div>`;
 
-  const STATS_VARIANTS = {
-    dayone: {
-      cells: [
-        {idx:'// 01', num:'15<sub>yrs</sub>', lab:'Moving Family<br>&amp; Friends'},
-        {idx:'// 02', num:'02<sub>+</sub>', lab:'Named Crew<br>On Call'},
-        {idx:'// 03', num:'$0', lab:'Down To<br>Book'},
-        {idx:'// 04', num:'04', lab:'Founding Slots<br>Open Below ▾', cls:'you'}
-      ],
-      foot: '* One paid move in the books &mdash; the rest of our fifteen years has been for family. The founding offer below is how we earn the next four.'
-    },
-    honest: {
-      cells: [
-        {idx:'// 01', num:'01',        lab:'Paid Move<br>So Far'},
-        {idx:'// 02', num:'27<sub>+</sub>', lab:'Moves For Family<br>&amp; Ourselves'},
-        {idx:'// 03', num:'24<sub>hr</sub>', lab:'Quote<br>Turnaround'},
-        {idx:'// 04', num:'$0',        lab:'Hidden<br>Fees, Ever'}
-      ],
-      foot: '* One paid job so far &mdash; and we\'ll tell you exactly how it went. We\'d rather earn the second than fake the fiftieth.'
-    },
-    founding: {
-      cells: [
-        {idx:'// RES', num:'<span class="sm">#</span>02', lab:'Your Customer<br>Number, Reserved', cls:'you'},
-        {idx:'// 02', num:'01', lab:'Booked Ahead<br>Of You'},
-        {idx:'// 03', num:'24<sub>hr</sub>', lab:'Quote<br>Turnaround'},
-        {idx:'// 04', num:'$0', lab:'Hidden<br>Fees, Ever'}
-      ],
-      foot: '* You\'d be customer #02. The first one got our undivided attention. So will you.'
-    },
-    log: {
-      cells: [
-        {idx:'// JOB 001', num:'<span class="sm">✓</span>', lab:'Aug \'25<br>2BR · North Main'},
-        {idx:'// JOB 002', num:'<span class="sm">▸</span><span class="arrow">YOU?</span>', lab:'Date pending<br>Slot open', cls:'you'},
-        {idx:'// 03', num:'24<sub>hr</sub>', lab:'Quote<br>Turnaround'},
-        {idx:'// 04', num:'$0', lab:'Hidden<br>Fees, Ever'}
-      ],
-      foot: '* One job done, done right. We\'re a new crew — better to count to one honestly than to four-hundred dishonestly.'
-    },
-    footnoted: {
-      // Looks closest to a "normal" stats bar, but the number is honest and there's a tiny wink underneath.
-      cells: [
-        {idx:'// 01', num:'01<sup style="font-family:JetBrains Mono,monospace;font-size:18px;vertical-align:super;font-weight:500">*</sup>', lab:'Move<br>Logged'},
-        {idx:'// 02', num:'5.0', lab:'Star Average<br>(The One)'},
-        {idx:'// 03', num:'24<sub>hr</sub>', lab:'Quote<br>Turnaround'},
-        {idx:'// 04', num:'$0', lab:'Hidden<br>Fees, Ever'}
-      ],
-      foot: '* Yes, only one. We\'re picky about saying yes — and you\'d notice if we weren\'t.'
-    }
+  // Stats bar shows verifiable claims only — no move count, no experience-years claim.
+  const VERIFIABLE_STATS = {
+    cells: [
+      {idx:'// 01', num:'0',                     lab:'Damage<br>Claims'},
+      {idx:'// 02', num:'$0',                    lab:'Overages<br>Billed'},
+      {idx:'// 03', num:'&lt;24<sub>hr</sub>',   lab:'Response<br>Time'},
+      {idx:'// 04', num:'2026',                  lab:'In Business<br>Since'}
+    ],
+    foot: ''
   };
+  // Every framing renders the same verifiable stats (the trust-framing A/B options are retained but neutralized).
+  const STATS_VARIANTS = { dayone:VERIFIABLE_STATS, honest:VERIFIABLE_STATS, founding:VERIFIABLE_STATS, log:VERIFIABLE_STATS, footnoted:VERIFIABLE_STATS };
 
   function renderStats(mode){
     const v = STATS_VARIANTS[mode] || STATS_VARIANTS.honest;
@@ -1286,12 +1260,9 @@
       </article>`).join('');
   }
 
-  function renderFootStat(mode){
-    const map = {dayone:'04 Founding Slots', honest:'01 Paid · 27+ Family', founding:'You\'d Be #02', log:'001 done · ✓', footnoted:'01 Logged*'};
-    document.getElementById('footMoves').textContent = map[mode] || '01 Logged';
-    const ratingMap = {dayone:'Pending first review', honest:'5.0 / 5.0 (1)', founding:'5.0 / 5.0 (1)', log:'5.0 / 5.0 (1)', footnoted:'5.0 / 5.0 (1)'};
-    const r = document.getElementById('footRating');
-    if (r) r.textContent = ratingMap[mode] || 'Pending first review';
+  function renderFootStat(){
+    /* Footer "On the books" is static now — damage claims / overages / response / since.
+       Rating stays "Pending first review" (in the markup) until a real review is posted. */
   }
 
   // ---- Hero headline variants (short rows so the display type fits) ----
@@ -1314,6 +1285,26 @@
     renderFootStat(TWEAKS.trustMode);
   }
   applyTweaks();
+
+  /* ── FOUNDING SLOTS ────────────────────────────────────────────────
+     Update this ONE number as founding slots fill (0–5). Everything on the
+     Founding Customer Offer reads from it: the dots, the "X of 5" label, and
+     the "0X / 05 slots open" marker. No other edits needed. */
+  const FOUNDING_SLOTS_OPEN = 4;
+  (function renderFoundingSlots(){
+    const total = 5;
+    const open = Math.max(0, Math.min(total, FOUNDING_SLOTS_OPEN));
+    const filled = total - open;
+    const marker = document.getElementById('foSlotMarker');
+    if (marker) marker.textContent = String(open).padStart(2, '0') + ' / 0' + total + ' slots open';
+    const counter = document.getElementById('foCounter');
+    if (counter) {
+      const dots = Array.from({ length: total }, (_, i) =>
+        `<span class="fo-dot ${i < filled ? 'filled' : 'open'}"></span>`).join('');
+      counter.innerHTML = dots +
+        `<span class="fo-counter-lab" id="foSlotLabel">${open} of ${total} founding slots open</span>`;
+    }
+  })();
 
   /* ---- Tweaks panel (host-toggled) ---- */
   const tweaksPanel = document.createElement('div');
@@ -1340,11 +1331,11 @@
       <div class="tp-label">Stats framing</div>
       <div class="tp-help">How we play "we're new" in the green bar</div>
       <div class="tp-radio" data-key="trustMode">
-        <button data-val="dayone"><b>Day one (zero paid)</b><span>15 yrs family · founding slot offer below. Full transparency.</span></button>
-        <button data-val="honest"><b>Honest counter</b><span>01 paid &middot; 27+ family. The contrast does the work.</span></button>
-        <button data-val="founding"><b>Founding customer</b><span>"You'd be #02." Reframes new as exclusive.</span></button>
-        <button data-val="log"><b>Job log</b><span>JOB 001 done · 002 YOU? — the visual <i>is</i> the receipt.</span></button>
-        <button data-val="footnoted"><b>Footnoted wink</b><span>Looks normal. Tiny dry footnote owns the count.</span></button>
+        <button data-val="dayone"><b>Day one</b><span>Verifiable stats + founding slot offer below. Full transparency.</span></button>
+        <button data-val="honest"><b>Honest counter</b><span>Verifiable stats bar. The plain truth does the work.</span></button>
+        <button data-val="founding"><b>Founding customer</b><span>Verifiable stats + founding framing.</span></button>
+        <button data-val="log"><b>Job log</b><span>Verifiable stats bar.</span></button>
+        <button data-val="footnoted"><b>Footnoted wink</b><span>Verifiable stats bar.</span></button>
       </div>
     </div>
     <div class="tp-section">
