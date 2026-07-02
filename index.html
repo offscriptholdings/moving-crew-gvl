@@ -139,7 +139,8 @@
 
   /* Top tape strip / fixed nav */
   .topbar{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ink);color:var(--cream);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-  .topbar-inner{max-width:1320px;margin:0 auto;padding:8px 32px;display:flex;justify-content:space-between;gap:24px;align-items:center}
+  .topbar-inner{max-width:1320px;margin:0 auto;padding:8px 32px;display:flex;justify-content:center;gap:24px;align-items:center}
+  #bookingBanner{white-space:nowrap}
   .topbar .pulse{display:inline-flex;align-items:center;gap:8px}
   .pulse::before{content:"";width:6px;height:6px;background:var(--green-hover);animation:blink 1.8s infinite}
   @keyframes blink{0%,60%{opacity:1}80%,100%{opacity:.25}}
@@ -158,6 +159,9 @@
   .nav-links a{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
   .nav-links a:hover{color:var(--green)}
   .nav-links a span{color:var(--muted);margin-right:6px}
+  .nav-phone{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;letter-spacing:.08em;color:var(--ink);white-space:nowrap}
+  .nav-phone svg{width:15px;height:15px;flex:0 0 auto;color:var(--green)}
+  .nav-phone:hover{color:var(--green)}
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border:1px solid transparent;transition:background .15s, color .15s, border-color .15s, transform .05s;position:relative}
   .btn:active{transform:translateY(1px)}
@@ -576,9 +580,7 @@
 <!-- ========== TOP TAPE ========== -->
 <div class="topbar" data-screen-label="Topbar">
   <div class="topbar-inner">
-    <span class="pulse" id="bookingBanner">Now booking · Mon-Sat</span>
-    <span>Owner-operated · Travelers Rest, SC</span>
-    <span>Call 864.280.7243</span>
+    <span class="pulse" id="bookingBanner">Booking moves this week</span>
   </div>
 </div>
 
@@ -606,8 +608,9 @@
       <a href="#reviews" style="display:none"><span>04</span>Reviews</a>
       <a href="#about"><span>05</span>Crew</a>
     </div>
-    <a href="#quote" class="btn btn-primary">Get a Quote
-      <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
+    <a href="tel:8642807243" class="nav-phone" aria-label="Call Reedy Moving Co">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h3l1.2 3-1.6 1.2a8 8 0 0 0 3.2 3.2L13 12l1 3v0h-2A10 10 0 0 1 2 5V3z"/></svg>
+      864.280.7243
     </a>
   </div>
 </nav>
@@ -1161,7 +1164,7 @@
       const target = new Date(d);
       target.setDate(d.getDate() + diff);
       const mo = target.toLocaleString('en-US', {month:'short'});
-      el.textContent = 'Booking moves · week of ' + mo + ' ' + target.getDate();
+      el.textContent = 'Booking moves for week of ' + mo + ' ' + target.getDate();
     } catch(_) {}
   })();
 
