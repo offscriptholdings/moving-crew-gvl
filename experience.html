@@ -20,9 +20,7 @@
 <!-- ========== TOP TAPE ========== -->
 <div class="topbar" data-screen-label="Topbar">
   <div class="topbar-inner">
-    <span class="pulse">On time, or you get a call first</span>
-    <span>Owner-operated · Travelers Rest, SC</span>
-    <span>Call 864.280.7243</span>
+    <span class="pulse" id="bookingBanner">Booking moves this week</span>
   </div>
 </div>
 
@@ -44,12 +42,15 @@
     </a>
     <div class="nav-links" aria-label="Primary">
       <a href="/#moments"><span>M</span>Moments</a>
+      <a href="/#how"><span>01</span>How</a>
       <a href="/#services"><span>02</span>Services</a>
       <a href="/#pricing"><span>03</span>Rates</a>
-      <a href="/experience"><span>·</span>Experience</a>
+      <a href="/#about"><span>05</span>Crew</a>
+      <a href="/experience"><span>&middot;</span>Experience</a>
     </div>
-    <a href="/#quote" class="btn btn-primary">Get a Quote
-      <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
+    <a href="tel:8642807243" class="nav-phone" aria-label="Call Reedy Moving Co">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h3l1.2 3-1.6 1.2a8 8 0 0 0 3.2 3.2L13 12l1 3v0h-2A10 10 0 0 1 2 5V3z"/></svg>
+      864.280.7243
     </a>
   </div>
 </nav>
@@ -143,16 +144,20 @@
         <p>Mon-Sat / 7am to 7pm</p>
       </div>
       <div class="col">
-        <h5>// Moments</h5>
-        <a href="/moments/estate">The Estate</a>
-        <a href="/experience">What to Expect</a>
-        <a href="/#moments">All moments</a>
+        <h5>// Service Area</h5>
+        <p>Greenville</p>
+        <p>Greer &middot; Simpsonville</p>
+        <p>Travelers Rest &middot; Easley</p>
+        <p>Mauldin &middot; Taylors</p>
       </div>
       <div class="col">
-        <h5>// Service Area</h5>
-        <p>Greenville · Greer</p>
-        <p>Travelers Rest · Easley</p>
-        <p>Simpsonville · Taylors</p>
+        <h5>// On the books</h5>
+        <div class="foot-mono">
+          <div><span class="k">Rating</span><span class="v">Pending first review</span></div>
+          <div><span class="k">Damage claims</span><span class="v">0</span></div>
+          <div><span class="k">Overages billed</span><span class="v">$0</span></div>
+          <div><span class="k">Response</span><span class="v">&lt; 24 hrs</span></div>
+        </div>
       </div>
       <div class="foot-partner">
         <span class="lead">Realtors, designers, attorneys:</span>
@@ -160,8 +165,8 @@
       </div>
     </div>
     <div class="foot-bar">
-      <span class="pulse">© 2026 Reedy Moving Co</span>
-      <span>Built in Travelers Rest · v2.6</span>
+      <span class="pulse">&copy; 2026 Reedy Moving Co</span>
+      <span>Built in Travelers Rest &middot; v2.6</span>
     </div>
   </div>
 </footer>
@@ -183,6 +188,12 @@
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
   document.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
+  (() => { try {
+    const el = document.getElementById('bookingBanner'); if(!el) return;
+    const d = new Date(); const diff = (1 - d.getDay() + 7) % 7;
+    const t = new Date(d); t.setDate(d.getDate() + diff);
+    el.textContent = 'Booking moves for week of ' + t.toLocaleString('en-US',{month:'short'}) + ' ' + t.getDate();
+  } catch(_){} })();
 </script>
 </body>
 </html>
