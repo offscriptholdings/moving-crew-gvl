@@ -129,3 +129,17 @@ footer{background:var(--ink);color:rgba(250,247,243,.7);border-top:1px solid rgb
   body{padding-bottom:72px}
   .mobile-cta{display:flex}
 }
+.about{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
+.about-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:330px 1fr;gap:48px;align-items:center;text-align:left}
+.about-inner .stamp{justify-content:flex-start;align-self:start;margin-bottom:4px}
+.about-letter{display:flex;flex-direction:column;gap:18px;min-width:0}
+.about p{font-family:'Barlow',serif;font-style:italic;font-size:21px;line-height:1.55;color:var(--ink)}
+.about .signoff{display:flex;align-items:center;gap:14px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--rust);justify-content:flex-start}
+.about .signoff::before,.about .signoff::after{content:"";width:48px;height:1px;background:var(--line-dark)}
+.firstmove{align-self:center;justify-self:center;width:100%;max-width:340px;background:var(--paper);border:1px solid var(--ink);text-align:left;margin:0;position:relative}
+.firstmove::after{content:"";position:absolute;right:-5px;bottom:-5px;width:12px;height:12px;background:var(--rust)}
+.firstmove .fm-cap{display:flex;justify-content:space-between;gap:10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:9px 12px;border-bottom:1px dashed var(--line-dark)}
+.firstmove .fm-cap b{color:var(--rust);font-weight:500}
+.firstmove img{display:block;width:100%;height:auto}
+.firstmove figcaption{font-family:'Barlow',sans-serif;font-style:italic;font-size:14px;line-height:1.45;color:var(--ink-soft);padding:11px 14px;border-top:1px solid var(--ink)}
+@media (max-width:760px){ .about-inner{grid-template-columns:1fr;gap:26px;text-align:center;max-width:560px} .about-letter{align-items:center;text-align:center} .about-inner .stamp{justify-content:center;align-self:center} .about .signoff{justify-content:center} }
