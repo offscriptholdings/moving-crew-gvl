@@ -648,7 +648,7 @@
     <div class="hero-bottom">
       <p class="sub">Local movers who show up on time, treat your stuff like their own, and don't leave until the job's done right.</p>
       <div class="ctas">
-        <a href="#quote" class="btn btn-primary btn-lg">Get a Free Quote
+        <a href="#quote" class="btn btn-primary btn-lg" data-src="hero">Get a Free Quote
           <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
         </a>
         <a href="tel:8642807243" class="btn btn-ghost btn-lg">Call 864.280.7243</a>
@@ -826,7 +826,7 @@
             <li><span class="k">Min. booking</span><span class="v">2 hr</span></li>
           </ul>
           <div class="rate"><span class="currency">$</span><span class="amount">149</span><span class="per">/ hr</span></div>
-          <a href="#quote" class="btn btn-primary btn-block">Book 2 Movers</a>
+          <a href="#quote" class="btn btn-primary btn-block" data-src="pricing">Book 2 Movers</a>
         </article>
         <article class="tier feature">
           <div class="ribbon">▸ Best Deal</div>
@@ -840,7 +840,7 @@
             <li><span class="k">Min. booking</span><span class="v">2 hr</span></li>
           </ul>
           <div class="rate"><span class="currency">$</span><span class="amount">199</span><span class="per">/ hr</span></div>
-          <a href="#quote" class="btn btn-primary btn-block">Book 3 Movers</a>
+          <a href="#quote" class="btn btn-primary btn-block" data-src="pricing">Book 3 Movers</a>
         </article>
         <article class="tier">
           <div class="tag"><span class="id">// TIER 03</span><span>Heavy</span></div>
@@ -853,7 +853,7 @@
             <li><span class="k">Min. booking</span><span class="v">2 hr</span></li>
           </ul>
           <div class="rate"><span class="currency">$</span><span class="amount">269</span><span class="per">/ hr</span></div>
-          <a href="#quote" class="btn btn-primary btn-block">Book 4 Movers</a>
+          <a href="#quote" class="btn btn-primary btn-block" data-src="pricing">Book 4 Movers</a>
         </article>
       </div>
       <div class="estimate-foot">
@@ -916,7 +916,7 @@
           <span class="fo-counter-lab" id="foSlotLabel">4 of 5 founding slots open</span>
         </div>
         <div class="fo-cta">
-          <a href="#quote" class="btn btn-primary btn-lg">Get Your Capped Quote
+          <a href="#quote" class="btn btn-primary btn-lg" data-src="founding-offer">Get Your Capped Quote
             <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
           </a>
           <a href="tel:8642807243" class="btn btn-ghost btn-lg">Or call us</a>
@@ -1114,7 +1114,7 @@
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h3l1.2 3-1.6 1.2a8 8 0 0 0 3.2 3.2L13 12l1 3v0h-2A10 10 0 0 1 2 5V3z"/></svg>
     Call
   </a>
-  <a href="#quote" class="m-quote">
+  <a href="#quote" class="m-quote" data-src="mobile-bar">
     Get a Free Quote
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg>
   </a>
@@ -1162,6 +1162,17 @@
     document.querySelectorAll('#momentOpts input').forEach(r => r.addEventListener('change', () => { if(notes && NOTE_HINT[r.value]) notes.setAttribute('placeholder', NOTE_HINT[r.value]); }));
   })();
 
+  /* ---- Lead-source attribution ---- */
+  let leadSource = '';
+  (() => {
+    const p = new URLSearchParams(location.search);
+    if (p.get('offer')) leadSource = 'offer:' + p.get('offer');
+    else if (p.get('moment')) leadSource = 'moment-page';
+    document.querySelectorAll('a[href*="#quote"]').forEach(a => {
+      a.addEventListener('click', () => { if (a.dataset.src) leadSource = a.dataset.src; });
+    });
+  })();
+
   const form = document.getElementById('quoteForm');
   const success = document.getElementById('successState');
   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xzdwlqwr';
@@ -1184,7 +1195,9 @@
       home_size: document.getElementById('size').value,
       services: services.join(', '),
       notes: document.getElementById('notes').value.trim(),
-      moment: (document.querySelector('#momentOpts input:checked') || {}).value || ''
+      moment: (document.querySelector('#momentOpts input:checked') || {}).value || '',
+      source: leadSource || 'direct',
+      referrer: document.referrer || ''
     };
     if (btn) btn.disabled = true;
     try {
