@@ -112,6 +112,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/moments.css">
 <style>
   :root{
     --cream:#faf7f3;
@@ -127,6 +128,10 @@
     --green-deep:#9e542a;
     --line:#cdc6b5;
     --line-dark:#9b9685;
+    --field:#ece4d5;
+    --rust:#c8743f;
+    --rust-hover:#d9854b;
+    --rust-deep:#9e542a;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--cream);color:var(--ink);font-family:'Barlow',system-ui,sans-serif;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -579,6 +584,10 @@
     .tier .rate .amount{font-size:60px}
     .success h3{font-size:34px}
   }
+  .foot-partner{grid-column:1 / -1;margin-top:8px;padding-top:20px;border-top:1px dotted rgba(250,247,243,.2);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .foot-partner a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust-hover)}
+  .foot-partner a:hover{color:#fff}
+  .foot-partner .lead{font-size:13px;color:rgba(250,247,243,.6)}
 </style>
 </head>
 <body>
@@ -607,6 +616,7 @@
       <span class="logo-word">Reedy Moving Co.<small>GVL</small></span>
     </a>
     <div class="nav-links" aria-label="Primary">
+      <a href="#moments"><span>M</span>Moments</a>
       <a href="#how"><span>01</span>How</a>
       <a href="#services"><span>02</span>Services</a>
       <a href="#pricing"><span>03</span>Rates</a>
@@ -657,6 +667,34 @@
     </div>
   </div>
 </header>
+
+<!-- ========== BRIDGE LINE ========== -->
+<section class="bridge" data-screen-label="02c Bridge Line">
+  <div class="wrap">
+    <span class="bar" aria-hidden="true"></span>
+    <p class="display">From moving day to estate day,<br>one crew you <span class="accent">trust</span>.</p>
+  </div>
+</section>
+
+<!-- ========== MOMENT CARD GRID (signature) ========== -->
+<section class="moments" id="moments" data-screen-label="02d Moments">
+  <div class="wrap">
+    <div class="sect-marker">
+      <span class="glyph">§</span><span class="mono">M</span><span class="spacer"></span><span class="name">Moments</span><span class="spacer"></span><span class="right">One crew, every kind of move</span>
+    </div>
+    <div class="moments-head">
+      <h2 class="display">What's Happening<br>At Your Place?</h2>
+      <p>Every move is a moment in someone's life. Tell us which one you're in and we'll take it from there, same crew, same care, whatever the day asks.</p>
+    </div>
+    <div class="moment-grid">
+      <a class="moment-card is-live" href="/moments/new-home" data-moment="new-home"><div class="mc-top"><span>M-01</span><svg class="mc-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg></div><div class="mc-name">The New<br>Home</div><p class="mc-line">Moving in deserves more than a truck and a quote.</p><div class="mc-foot"><span>Read more</span><span>&rarr;</span></div></a>
+      <a class="moment-card is-live" href="/moments/empty-nest" data-moment="empty-nest"><div class="mc-top"><span>M-02</span><svg class="mc-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg></div><div class="mc-name">The Empty<br>Nest</div><p class="mc-line">When the house is too big and the timeline is yours.</p><div class="mc-foot"><span>Read more</span><span>&rarr;</span></div></a>
+      <a class="moment-card is-live" href="/moments/estate" data-moment="estate"><div class="mc-top"><span>M-03</span><svg class="mc-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg></div><div class="mc-name">The<br>Estate</div><p class="mc-line">When everything lands at once and you need it handled.</p><div class="mc-foot"><span>Read more</span><span>&rarr;</span></div></a>
+      <a class="moment-card is-live" href="/moments/prep" data-moment="prep"><div class="mc-top"><span>M-04</span><svg class="mc-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg></div><div class="mc-name">The<br>Prep</div><p class="mc-line">Getting a house ready to sell (or love again).</p><div class="mc-foot"><span>Read more</span><span>&rarr;</span></div></a>
+      <a class="moment-card is-live" href="/moments/refresh" data-moment="refresh"><div class="mc-top"><span>M-05</span><svg class="mc-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8 H13 M9 4 L13 8 L9 12"/></svg></div><div class="mc-name">The<br>Refresh</div><p class="mc-line">Making space for what comes next.</p><div class="mc-foot"><span>Read more</span><span>&rarr;</span></div></a>
+    </div>
+  </div>
+</section>
 
 <!-- ========== STATS ========== -->
 <section class="stats" data-screen-label="02 Stats">
@@ -970,6 +1008,18 @@
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
           <div class="wo-sub">// Fill it out · we'll text you a rate + cap</div>
 
+          <div class="field wo-moment">
+            <label>What's Happening? <span class="req">optional</span></label>
+            <div class="moment-opts" id="momentOpts">
+              <label class="m-opt"><input type="radio" name="moment" value="new-home"><span>The New Home</span></label>
+              <label class="m-opt"><input type="radio" name="moment" value="empty-nest"><span>The Empty Nest</span></label>
+              <label class="m-opt"><input type="radio" name="moment" value="estate"><span>The Estate</span></label>
+              <label class="m-opt"><input type="radio" name="moment" value="prep"><span>The Prep</span></label>
+              <label class="m-opt"><input type="radio" name="moment" value="refresh"><span>The Refresh</span></label>
+              <label class="m-opt"><input type="radio" name="moment" value="muscle"><span>Just need muscle</span></label>
+            </div>
+          </div>
+
           <div class="form-row">
             <div class="field"><label>First Name <span class="req">req</span></label><input id="fn" type="text" placeholder="Jane" required></div>
             <div class="field"><label>Last Name <span class="req">req</span></label><input id="ln" type="text" placeholder="Doe" required></div>
@@ -1069,6 +1119,10 @@
           <div><span class="k">Response</span><span class="v">&lt; 24 hrs</span></div>
         </div>
       </div>
+      <div class="foot-partner">
+        <span class="lead">Realtors, designers, attorneys:</span>
+        <a href="/partners">partner with us &rarr;</a>
+      </div>
     </div>
     <div class="foot-bar">
       <span class="pulse">© 2026 Reedy Moving Co</span>
@@ -1110,6 +1164,27 @@
   });
 
   // Form submit -> POST to Formspree, then show the success state with a confirmation number.
+  /* ---- Moment-aware intake: ?moment= pre-select + note hint ---- */
+  (() => {
+    const notes = document.getElementById('notes');
+    const NOTE_HINT = {
+      'new-home':  'First place? Anything fragile or oversized we should plan for?',
+      'empty-nest':'Downsizing, anything staying, going to family, or into storage?',
+      'estate':    'Settling an estate, realtor timeline, out-of-state, items to set aside?',
+      'prep':      'Staging or clearing to sell, what needs to move or go?',
+      'refresh':   'Rearranging or making room, which rooms and pieces?',
+      'muscle':    'Just labor: stairs, parking, tight doorways, big items we should know about...'
+    };
+    function selectMoment(val){
+      const input = document.querySelector('#momentOpts input[value="'+val+'"]');
+      if(!input) return; input.checked = true;
+      if(notes && NOTE_HINT[val]) notes.setAttribute('placeholder', NOTE_HINT[val]);
+    }
+    const param = new URLSearchParams(location.search).get('moment');
+    if(param) selectMoment(param);
+    document.querySelectorAll('#momentOpts input').forEach(r => r.addEventListener('change', () => { if(notes && NOTE_HINT[r.value]) notes.setAttribute('placeholder', NOTE_HINT[r.value]); }));
+  })();
+
   const form = document.getElementById('quoteForm');
   const success = document.getElementById('successState');
   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xzdwlqwr';
@@ -1131,7 +1206,8 @@
       move_date: document.getElementById('date').value,
       home_size: document.getElementById('size').value,
       services: services.join(', '),
-      notes: document.getElementById('notes').value.trim()
+      notes: document.getElementById('notes').value.trim(),
+      moment: (document.querySelector('#momentOpts input:checked') || {}).value || ''
     };
     if (btn) btn.disabled = true;
     try {
