@@ -87,13 +87,11 @@
 .promise-cell p{font-size:15px;line-height:1.55;color:var(--ink-soft)}
 @media (max-width:760px){.promise-grid{grid-template-columns:1fr}}
 
-/* 5 · Visual proof, placeholder treatment (no stock, spec §1) */
+/* 5 · On-the-job labels, text-only until photography is in */
 .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.proof-slot{position:relative;aspect-ratio:4/3;background:var(--field);border:1px solid var(--line-dark);display:flex;flex-direction:column;justify-content:space-between;padding:20px;overflow:hidden}
-.proof-slot::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 13px,rgba(155,150,133,.11) 13px,rgba(155,150,133,.11) 14px)}
-.proof-slot .ps-tag{position:relative;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);align-self:flex-start}
+.proof-slot{position:relative;display:flex;flex-direction:column;padding:16px 0 0;border-top:2px solid var(--ink)}
 .proof-slot .ps-cap{position:relative;font-family:'Barlow',sans-serif;font-size:15px;line-height:1.45;color:var(--ink-soft);max-width:34ch}
-.proof-slot .ps-cap b{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;display:block;color:var(--ink);margin-bottom:4px;letter-spacing:.01em}
+.proof-slot .ps-cap b{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;display:block;color:var(--ink);letter-spacing:.01em}
 @media (max-width:760px){.proof-grid{grid-template-columns:1fr}}
 
 /* 6 · CTA band, one rust CTA */
